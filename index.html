@@ -1,0 +1,3808 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Combined HTML</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>UIR</title>
+  <link rel="stylesheet" media="all" href="/assets/application-a441a02d4d30c8baac6c150f7ac001e281a1b2901f55029138b11a1f9920c1da.css" data-turbolinks-track="true" />
+  <script src="/assets/application-768300f821892a7d121cd2bc3ea41884e332e830d146431b503b03c2595fb5d7.js" data-turbolinks-track="true"></script>
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="iWOfgmCSVYwWyQYuz7/uNHLTsWA4H4s1iHYuUqcpHRO+dlOSU1ywfuvuZOy4rLf2b60DiBsdHM/VetJ2QUFZ0g==" />
+</head>
+<body>
+Оценка : 94.27051671732522
+Ошибки : []
+
+
+
+<link rel="stylesheet" media="screen" href="/assets/framestud-04024382391bb910584145d8113cf35ef376b55d125bb4516cebeb14ce788597.css" />
+<br>
+ <div align="center"> Время(<label id="min" contentEditable=true></label>:<label id="sec" contentEditable=true></label>:<label id="complete" contentEditable=true></label>) </div>
+
+
+<script>
+
+
+
+
+    var mytime = -30577030
+    var minutes =  (mytime/60).toFixed(0);
+    var seconds =  (mytime % 60);
+    //alert(minutes)
+    //alert(seconds)
+    //alert("-30577030")
+    //alert ("2022-11-24 21:49:40 +0300" + " " + "2021-12-05 23:57:30 +0300")
+    //alert(min + " " + sec)
+    var time = []
+    time.push(minutes);
+    time.push(seconds);
+    timerId = setInterval(function() {
+
+        time[1] --;
+        if (time[1] < 0)
+        {
+            time[1] = 59
+            time[0] --;
+        }
+        $("#min").text(time[0]);
+        $("#sec").text(time[1]);
+        if (time[0] <= 0)
+        {
+            $("#complete").text("ЗАВЕРШИТЬ");
+            $("#min").text(0);
+            $("#sec").text(0);
+
+        }
+
+
+    }, 1000);
+
+</script>
+
+
+<script>
+
+    function insertTab(o, e)
+    {
+        var kC = e.keyCode ? e.keyCode : e.charCode ? e.charCode : e.which;
+        if (kC == 9 && !e.shiftKey && !e.ctrlKey && !e.altKey)
+        {
+            var oS = o.scrollTop;
+            if (o.setSelectionRange)
+            {
+                var sS = o.selectionStart;
+                var sE = o.selectionEnd;
+                o.value = o.value.substring(0, sS) + "\t" + o.value.substr(sE);
+                o.setSelectionRange(sS + 1, sS + 1);
+                o.focus();
+            }
+            else if (o.createTextRange)
+            {
+                document.selection.createRange().text = "\t";
+                e.returnValue = false;
+            }
+            o.scrollTop = oS;
+            if (e.preventDefault)
+            {
+                e.preventDefault();
+            }
+            return false;
+        }
+        return true;
+    }
+
+
+
+
+</script>
+
+<form action="/framestudent/updateframe" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="CepfBZWLSlwwu49jvuu2gYmAMyksYwWk42NM+x6KZZ8+/5MVpkWvrs2c7aHJ+O9DlP6BwQ9hkl6+b7Df+OIhXg==" />
+    <div id="line">
+      <input type="hidden" name="id" id="id" value="476" />
+
+
+<table border="2px" align="center">
+   <caption><b> <label for="________:_________1">Название: Задание 1</label></b></caption>
+			<tr>
+				<td>Интерпретатор</td>			
+				<td>Словарь</td>			
+				<td>Вывод</td>			
+			</tr>
+      <tr>
+      
+      	 	<td><textarea name="studentcode" id="studentcode" autofocus="autofocus" rows="25" cols="105" onkeydown="insertTab(this, event)" maxlength="2500">
+(fassert Адрес(classification(generic))(улица(default(Москворечье)))(дом)(корпус(default(нет)))(квартира))(fassert Студент(ako(value Адрес))(classification(generic))(ФИО)(Университет(default(НИЯУ_МИФИ)))(Кафедра(default(Кибернетика))))(fassert Преподаватель(ako(valueАдрес))(classification(generic))(ФИО)(Предмет)(Кафедра(default(Кибернетика))))(fassert Студент1(ako(value Студент))(ФИО(value(ИвановИИ)))(дом(value(7)))(квартира(value(45))))(fassert Студент2(ako(value Студент))(ФИО(value(ПетровПП)))(дом(value(7)))(квартира(value(44))))(fassert Студент3(ako(value Студент))(ФИО(value(СидоровСС)))(улица(value(Кавказский_бульвар)))(дом(value(7)))(корпус(value(3)))(квартира(value(54))))(fassert Преподаватель1(ako(value Преподаватель))(Предмет(value(ПрограммированиеС)))(ФИО(value(ПетровДС)))(улица(value(Москворечье)))(дом(value(8)))(корпус(value(1)))(квартира(value(54))))(fassert Преподаватель2(ako(value Преподаватель))(Предмет(value(ПрограммированиеС)))(ФИО(value(УшаковУУ)))(улица(value(Москворечье)))(дом(value(7)))(корпус(value(3)))(квартира(value(99))))</textarea> </td>
+      
+					<td><textarea name="dictionary" id="dictionary" autofocus="autofocus" rows="25" cols="25" onkeydown="insertTab(this, event)">
+[&quot;Адрес&quot;, &quot;generic&quot;, &quot;улица&quot;, &quot;Москворечье&quot;, &quot;дом&quot;, &quot;корпус&quot;, &quot;нет&quot;, &quot;квартира&quot;, &quot;Студент&quot;, &quot;ako&quot;, &quot;ФИО&quot;, &quot;Университет&quot;, &quot;НИЯУ_МИФИ&quot;, &quot;Кафедра&quot;, &quot;Кибернетика&quot;, &quot;Преподаватель&quot;, &quot;Предмет&quot;, &quot;Студент1&quot;, &quot;7&quot;, &quot;45&quot;, &quot;ИвановИИ&quot;, &quot;Студент2&quot;, &quot;44&quot;, &quot;ПетровПП&quot;, &quot;Студент3&quot;, &quot;Кавказский_бульвар&quot;, &quot;3&quot;, &quot;54&quot;, &quot;СидоровСС&quot;, &quot;Преподаватель1&quot;, &quot;8&quot;, &quot;1&quot;, &quot;ПетровДС&quot;, &quot;ПрограммированиеС&quot;, &quot;Преподаватель2&quot;, &quot;99&quot;, &quot;УшаковУУ&quot;]</textarea></td>
+      		<td><textarea name="console" id="666" autofocus="autofocus" rows="25" cols="40" onkeydown="insertTab(this, event)">
+Ошибки в фрейме: []
+</textarea></td>
+      </tr>
+			<tr>
+				<td>      <input type="submit" name="commit" value="Транслировать" data-disable-with="Транслировать" />
+      						<input type="submit" name="commit" value="Завершить" data-disable-with="Завершить" /></td>
+			</tr>
+			<tr>
+				<td><textarea name="task" id="task" rows="25" cols="105" maxlength="2500">
+{ 
+
+  Задание :
+
+  Написать Фрейм прототип Адрес 
+
+  в котором есть следующие слоты улица (по умолчанию Москворечье), дом, корпус (по умолчанию нет, и квартира
+
+    Написать фрейм прототип студент, у которого есть адрес, ФИО, Университет по умолчанию НИЯУ_МИФИ, кафедра (по умолчанию Кибернетика) 
+
+
+
+  Написать фрейм прототип преподаватель, у которого есть адрес, ФИО, Предмет (Название предмета который он ведет), и кафедра ( по умолчанию Кибернетика)
+
+
+
+Написать фрейм Студент1 
+
+ФИО ИвановИИ
+
+Адрес Москворечье д7 кв45
+
+Университет МИФИ кафедра Кибернетика
+
+
+
+Написать фрейм Студент2
+
+ФИО ПетровПП
+
+Адрес Москворечье д7 кв44
+
+Университет МИФИ кафедра Кибернетика
+
+
+
+Написать фрейм Студент3
+
+ФИО СидоровСС
+
+Адрес Кавказский_бульвар д7 корп 3 кв54
+
+Университет МИФИ кафедра Кибернетика
+
+
+
+Написать фрейм Преподаватель1
+
+ФИО ПетровДС
+
+Адрес Москворечье д8 корп 1 кв54
+
+Университет МИФИ кафедра Кибернетика Предмет 
+
+ПрограммированиеС
+
+
+
+Написать фрейм Преподаватель2
+
+ФИО УшаковУУ
+
+Адрес Москворечьед7 корп 3 кв99
+
+Университет МИФИ кафедра Кибернетика Предмет 
+
+ПрограммированиеС
+
+
+
+ }</textarea> </td>
+				<td><table border="2px">
+
+
+</table>
+</td>
+			</tr>
+
+</table>
+
+
+
+
+
+
+      <br>
+
+
+
+
+    </div>
+</form>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>UIR</title>
+  <link rel="stylesheet" media="all" href="/assets/application-a441a02d4d30c8baac6c150f7ac001e281a1b2901f55029138b11a1f9920c1da.css" data-turbolinks-track="true" />
+  <script src="/assets/application-768300f821892a7d121cd2bc3ea41884e332e830d146431b503b03c2595fb5d7.js" data-turbolinks-track="true"></script>
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="VhJIF1Fcdyxl23kGHa+B7IRe+3Vndj+lYv/sXH3/BDthB4QHYpKS3pj8G8RqvNgumSBJnUR0qF8/8xB4m5dA+g==" />
+</head>
+<body>
+Оценка : 100.0
+Ошибки : []
+
+
+
+<link rel="stylesheet" media="screen" href="/assets/framestud-04024382391bb910584145d8113cf35ef376b55d125bb4516cebeb14ce788597.css" />
+<br>
+ <div align="center"> Время(<label id="min" contentEditable=true></label>:<label id="sec" contentEditable=true></label>:<label id="complete" contentEditable=true></label>) </div>
+
+
+<script>
+
+
+
+
+    var mytime = -30256926
+    var minutes =  (mytime/60).toFixed(0);
+    var seconds =  (mytime % 60);
+    //alert(minutes)
+    //alert(seconds)
+    //alert("-30256926")
+    //alert ("2022-11-24 21:49:50 +0300" + " " + "2021-12-09 16:52:44 +0300")
+    //alert(min + " " + sec)
+    var time = []
+    time.push(minutes);
+    time.push(seconds);
+    timerId = setInterval(function() {
+
+        time[1] --;
+        if (time[1] < 0)
+        {
+            time[1] = 59
+            time[0] --;
+        }
+        $("#min").text(time[0]);
+        $("#sec").text(time[1]);
+        if (time[0] <= 0)
+        {
+            $("#complete").text("ЗАВЕРШИТЬ");
+            $("#min").text(0);
+            $("#sec").text(0);
+
+        }
+
+
+    }, 1000);
+
+</script>
+
+
+<script>
+
+    function insertTab(o, e)
+    {
+        var kC = e.keyCode ? e.keyCode : e.charCode ? e.charCode : e.which;
+        if (kC == 9 && !e.shiftKey && !e.ctrlKey && !e.altKey)
+        {
+            var oS = o.scrollTop;
+            if (o.setSelectionRange)
+            {
+                var sS = o.selectionStart;
+                var sE = o.selectionEnd;
+                o.value = o.value.substring(0, sS) + "\t" + o.value.substr(sE);
+                o.setSelectionRange(sS + 1, sS + 1);
+                o.focus();
+            }
+            else if (o.createTextRange)
+            {
+                document.selection.createRange().text = "\t";
+                e.returnValue = false;
+            }
+            o.scrollTop = oS;
+            if (e.preventDefault)
+            {
+                e.preventDefault();
+            }
+            return false;
+        }
+        return true;
+    }
+
+
+
+
+</script>
+
+<form action="/framestudent/updateframe" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="rpjR+mDiwWmUG2LPece581xh2xoQeD+S49MDQ7hU+3mZjR3qUywkm2k8AA0O1OAxQR9p8jN6qGi+3/9nXjy/uA==" />
+    <div id="line">
+      <input type="hidden" name="id" id="id" value="592" />
+
+
+<table border="2px" align="center">
+   <caption><b> <label for="________:_________1">Название: Задание 1</label></b></caption>
+			<tr>
+				<td>Интерпретатор</td>			
+				<td>Словарь</td>			
+				<td>Вывод</td>			
+			</tr>
+      <tr>
+      
+      	 	<td><textarea name="studentcode" id="studentcode" autofocus="autofocus" rows="25" cols="105" onkeydown="insertTab(this, event)" maxlength="2500">
+(fassert Адрес(classification (generic))(улица (default (Москворечье)))(дом)(корпус(default (нет)))(квартира))(fassert Студент(ako (value Адрес))(classification (generic))(ФИО)(Университет (default (НИЯУ_МИФИ)))(Кафедра(default(Кибернетика))))(fassert Преподаватель(ako(value Адрес))(classification(generic))(ФИО)(Предмет)(Кафедра(default(Кибернетика))))(fassert Студент1(ako(value Студент))(ФИО(value(ИвановИИ)))(дом(value(7)))(квартира(value(45))))(fassert Студент2(ako(value Студент))(ФИО(value(ПетровПП)))(дом(value(7)))(квартира(value(44))))(fassert Студент3(ako(value Студент))(ФИО(value(СидоровСС)))(улица(value(Кавказский_бульвар)))(дом(value(7)))(корпус(value(3)))(квартира(value(54))))(fassert Преподаватель1(ako(value Преподаватель))(Предмет(value(ПрограммированиеС)))(ФИО(value(ПетровДС)))(улица(value(Москворечье)))(дом(value(8)))(корпус(value(1)))(квартира(value(54))))(fassert Преподаватель2(ako(value Преподаватель))(Предмет(value(ПрограммированиеС)))(ФИО(value(УшаковУУ)))(улица(value(Москворечье)))(дом(value(7)))(корпус(value(3)))(квартира(value(99))))</textarea> </td>
+      
+					<td><textarea name="dictionary" id="dictionary" autofocus="autofocus" rows="25" cols="25" onkeydown="insertTab(this, event)">
+[&quot;Адрес&quot;, &quot;generic&quot;, &quot;улица&quot;, &quot;Москворечье&quot;, &quot;дом&quot;, &quot;корпус&quot;, &quot;нет&quot;, &quot;квартира&quot;, &quot;Студент&quot;, &quot;ako&quot;, &quot;ФИО&quot;, &quot;Университет&quot;, &quot;НИЯУ_МИФИ&quot;, &quot;Кафедра&quot;, &quot;Кибернетика&quot;, &quot;Преподаватель&quot;, &quot;Предмет&quot;, &quot;Студент1&quot;, &quot;7&quot;, &quot;45&quot;, &quot;ИвановИИ&quot;, &quot;Студент2&quot;, &quot;44&quot;, &quot;ПетровПП&quot;, &quot;Студент3&quot;, &quot;Кавказский_бульвар&quot;, &quot;3&quot;, &quot;54&quot;, &quot;СидоровСС&quot;, &quot;Преподаватель1&quot;, &quot;8&quot;, &quot;1&quot;, &quot;ПетровДС&quot;, &quot;ПрограммированиеС&quot;, &quot;Преподаватель2&quot;, &quot;99&quot;, &quot;УшаковУУ&quot;]</textarea></td>
+      		<td><textarea name="console" id="666" autofocus="autofocus" rows="25" cols="40" onkeydown="insertTab(this, event)">
+Ошибки в фрейме: []
+</textarea></td>
+      </tr>
+			<tr>
+				<td>      <input type="submit" name="commit" value="Транслировать" data-disable-with="Транслировать" />
+      						<input type="submit" name="commit" value="Завершить" data-disable-with="Завершить" /></td>
+			</tr>
+			<tr>
+				<td><textarea name="task" id="task" rows="25" cols="105" maxlength="2500">
+{ 
+
+  Задание :
+
+  Написать Фрейм прототип Адрес 
+
+  в котором есть следующие слоты улица (по умолчанию Москворечье), дом, корпус (по умолчанию нет, и квартира
+
+    Написать фрейм прототип студент, у которого есть адрес, ФИО, Университет по умолчанию НИЯУ_МИФИ, кафедра (по умолчанию Кибернетика) 
+
+
+
+  Написать фрейм прототип преподаватель, у которого есть адрес, ФИО, Предмет (Название предмета который он ведет), и кафедра ( по умолчанию Кибернетика)
+
+
+
+Написать фрейм Студент1 
+
+ФИО ИвановИИ
+
+Адрес Москворечье д7 кв45
+
+Университет МИФИ кафедра Кибернетика
+
+
+
+Написать фрейм Студент2
+
+ФИО ПетровПП
+
+Адрес Москворечье д7 кв44
+
+Университет МИФИ кафедра Кибернетика
+
+
+
+Написать фрейм Студент3
+
+ФИО СидоровСС
+
+Адрес Кавказский_бульвар д7 корп 3 кв54
+
+Университет МИФИ кафедра Кибернетика
+
+
+
+Написать фрейм Преподаватель1
+
+ФИО ПетровДС
+
+Адрес Москворечье д8 корп 1 кв54
+
+Университет МИФИ кафедра Кибернетика Предмет 
+
+ПрограммированиеС
+
+
+
+Написать фрейм Преподаватель2
+
+ФИО УшаковУУ
+
+Адрес Москворечьед7 корп 3 кв99
+
+Университет МИФИ кафедра Кибернетика Предмет 
+
+ПрограммированиеС
+
+
+
+ }</textarea> </td>
+				<td><table border="2px">
+
+
+</table>
+</td>
+			</tr>
+
+</table>
+
+
+
+
+
+
+      <br>
+
+
+
+
+    </div>
+</form>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>UIR</title>
+  <link rel="stylesheet" media="all" href="/assets/application-a441a02d4d30c8baac6c150f7ac001e281a1b2901f55029138b11a1f9920c1da.css" data-turbolinks-track="true" />
+  <script src="/assets/application-768300f821892a7d121cd2bc3ea41884e332e830d146431b503b03c2595fb5d7.js" data-turbolinks-track="true"></script>
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="y2aK1SPcwjjO1jPIfySX79PgHsdnKpriIbgaVWyC6DP8c0bFEBInyjPxUQoIN84tzp6sL0QoDRh8tOZxiuqs8g==" />
+</head>
+<body>
+Оценка : 100.0
+Ошибки : []
+
+
+
+<link rel="stylesheet" media="screen" href="/assets/framestud-04024382391bb910584145d8113cf35ef376b55d125bb4516cebeb14ce788597.css" />
+<br>
+ <div align="center"> Время(<label id="min" contentEditable=true></label>:<label id="sec" contentEditable=true></label>:<label id="complete" contentEditable=true></label>) </div>
+
+
+<script>
+
+
+
+
+    var mytime = -22920290
+    var minutes =  (mytime/60).toFixed(0);
+    var seconds =  (mytime % 60);
+    //alert(minutes)
+    //alert(seconds)
+    //alert("-22920290")
+    //alert ("2022-11-24 21:50:09 +0300" + " " + "2022-03-04 14:50:19 +0300")
+    //alert(min + " " + sec)
+    var time = []
+    time.push(minutes);
+    time.push(seconds);
+    timerId = setInterval(function() {
+
+        time[1] --;
+        if (time[1] < 0)
+        {
+            time[1] = 59
+            time[0] --;
+        }
+        $("#min").text(time[0]);
+        $("#sec").text(time[1]);
+        if (time[0] <= 0)
+        {
+            $("#complete").text("ЗАВЕРШИТЬ");
+            $("#min").text(0);
+            $("#sec").text(0);
+
+        }
+
+
+    }, 1000);
+
+</script>
+
+
+<script>
+
+    function insertTab(o, e)
+    {
+        var kC = e.keyCode ? e.keyCode : e.charCode ? e.charCode : e.which;
+        if (kC == 9 && !e.shiftKey && !e.ctrlKey && !e.altKey)
+        {
+            var oS = o.scrollTop;
+            if (o.setSelectionRange)
+            {
+                var sS = o.selectionStart;
+                var sE = o.selectionEnd;
+                o.value = o.value.substring(0, sS) + "\t" + o.value.substr(sE);
+                o.setSelectionRange(sS + 1, sS + 1);
+                o.focus();
+            }
+            else if (o.createTextRange)
+            {
+                document.selection.createRange().text = "\t";
+                e.returnValue = false;
+            }
+            o.scrollTop = oS;
+            if (e.preventDefault)
+            {
+                e.preventDefault();
+            }
+            return false;
+        }
+        return true;
+    }
+
+
+
+
+</script>
+
+<form action="/framestudent/updateframe" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="o3MBYAwnV8Lc0cFUcnZczHXSJzRWFeExRBP5wLwaKz2UZs1wP+myMCH2o5YFZQUOaKyV3HUXdssZHwXkWnJv/A==" />
+    <div id="line">
+      <input type="hidden" name="id" id="id" value="809" />
+
+
+<table border="2px" align="center">
+   <caption><b> <label for="________:_________3">Название: Задание 3</label></b></caption>
+			<tr>
+				<td>Интерпретатор</td>			
+				<td>Словарь</td>			
+				<td>Вывод</td>			
+			</tr>
+      <tr>
+      
+      	 	<td><textarea name="studentcode" id="studentcode" autofocus="autofocus" rows="25" cols="105" onkeydown="insertTab(this, event)" maxlength="2500">
+(fassert место_рыбалки
+
+	(classification value (generic))
+
+	(Место (default(море) (озеро) (океан) (река) ))
+
+)
+
+
+
+(fassert средства_ловли
+
+	(classification value (generic))
+
+	(способ (default (спиннинг) (лодка)(червяк) (наживка)))
+
+)
+
+
+
+(fassert рыба
+
+	(classification value (generic))
+
+	(вид(default (травоядная) (хищная) (полухищная)))
+
+
+
+)
+
+
+
+
+
+(fassert рыбалка_на_пресных_водоемах
+
+	(classification value (generic))
+
+	(ako (value место_рыбалки средства_ловли рыба ))
+
+	(рыбак (default (профессионал ) (любитель ) (спортсмен)))
+
+)
+
+
+
+(fassert любительская_рыбалка_на_реке_обь 
+
+	(ako (value рыбалка_на_пресных_водоемах))
+
+	(рыбак (value (любитель)))
+
+	(место (value (река_обь)))
+
+)</textarea> </td>
+      
+					<td><textarea name="dictionary" id="dictionary" autofocus="autofocus" rows="25" cols="25" onkeydown="insertTab(this, event)">
+[&quot;место_рыбалки&quot;, &quot;generic&quot;, &quot;место&quot;, &quot;море&quot;, &quot;озеро&quot;, &quot;океан&quot;, &quot;река&quot;, &quot;средства_ловли&quot;, &quot;способ&quot;, &quot;спиннинг&quot;, &quot;лодка&quot;, &quot;червяк&quot;, &quot;наживка&quot;, &quot;рыба&quot;, &quot;вид&quot;, &quot;травоядная&quot;, &quot;хищная&quot;, &quot;полухищная&quot;, &quot;рыбалка_на_пресных_водоемах&quot;, &quot;ako&quot;, &quot;рыбак&quot;, &quot;профессионал&quot;, &quot;любитель&quot;, &quot;спортсмен&quot;, &quot;любительская_рыбалка_на_реке_обь&quot;, &quot;река_обь&quot;]</textarea></td>
+      		<td><textarea name="console" id="666" autofocus="autofocus" rows="25" cols="40" onkeydown="insertTab(this, event)">
+Ошибки в фрейме: []
+</textarea></td>
+      </tr>
+			<tr>
+				<td>      <input type="submit" name="commit" value="Транслировать" data-disable-with="Транслировать" />
+      						<input type="submit" name="commit" value="Завершить" data-disable-with="Завершить" /></td>
+			</tr>
+			<tr>
+				<td><textarea name="task" id="task" rows="25" cols="105" maxlength="2500">
+Задание 
+
+Создать фрейм прототип место_рыбалки
+
+которые имеет одно поле &quot;место&quot; и несколько значений по умолчанию море озеро океан река
+
+
+
+Создать фрейм прототип средства_ловли
+
+которые имеет одно поле &quot;средства&quot; и несколько значений по умолчанию спиннинг лодка червяк наживка 
+
+
+
+Создать фрейм прототип рыба
+
+которые имеет одно поле &quot;вид&quot; и несколько значений по умолчанию хищная полухищная травоядная
+
+
+
+Создать фрейм прототип рыбалка_на_пресных_водоемах
+
+который наследует все свойства ранее созданных фреймов
+
+а так же имеет поле &quot;рыбак&quot; и несколько значений по умолчанию профессионал любитель спортсмен
+
+
+
+создать фрейм любительская_рыбалка_на_реке_обь 
+
+который наследует все свойства рыбалка_на_пресных_водоемах
+
+а и имеет следующие значения
+
+-----
+
+место река_обь
+
+рыбак любитель
+
+-----</textarea> </td>
+				<td><table border="2px">
+
+
+</table>
+</td>
+			</tr>
+
+</table>
+
+
+
+
+
+
+      <br>
+
+
+
+
+    </div>
+</form>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>UIR</title>
+  <link rel="stylesheet" media="all" href="/assets/application-a441a02d4d30c8baac6c150f7ac001e281a1b2901f55029138b11a1f9920c1da.css" data-turbolinks-track="true" />
+  <script src="/assets/application-768300f821892a7d121cd2bc3ea41884e332e830d146431b503b03c2595fb5d7.js" data-turbolinks-track="true"></script>
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="JdjQT0nOSxQWgbCbqZVq4G+bVkHZPxNJ7TCrH827la0SzRxfegCu5uum0lnehjMicuXkqfo9hLOwPFc7K9PRbA==" />
+</head>
+<body>
+Оценка : 100.0
+Ошибки : []
+
+
+
+<link rel="stylesheet" media="screen" href="/assets/framestud-04024382391bb910584145d8113cf35ef376b55d125bb4516cebeb14ce788597.css" />
+<br>
+ <div align="center"> Время(<label id="min" contentEditable=true></label>:<label id="sec" contentEditable=true></label>:<label id="complete" contentEditable=true></label>) </div>
+
+
+<script>
+
+
+
+
+    var mytime = -8347
+    var minutes =  (mytime/60).toFixed(0);
+    var seconds =  (mytime % 60);
+    //alert(minutes)
+    //alert(seconds)
+    //alert("-8347")
+    //alert ("2022-11-29 17:24:17 +0300" + " " + "2022-11-29 14:50:10 +0300")
+    //alert(min + " " + sec)
+    var time = []
+    time.push(minutes);
+    time.push(seconds);
+    timerId = setInterval(function() {
+
+        time[1] --;
+        if (time[1] < 0)
+        {
+            time[1] = 59
+            time[0] --;
+        }
+        $("#min").text(time[0]);
+        $("#sec").text(time[1]);
+        if (time[0] <= 0)
+        {
+            $("#complete").text("ЗАВЕРШИТЬ");
+            $("#min").text(0);
+            $("#sec").text(0);
+
+        }
+
+
+    }, 1000);
+
+</script>
+
+
+<script>
+
+    function insertTab(o, e)
+    {
+        var kC = e.keyCode ? e.keyCode : e.charCode ? e.charCode : e.which;
+        if (kC == 9 && !e.shiftKey && !e.ctrlKey && !e.altKey)
+        {
+            var oS = o.scrollTop;
+            if (o.setSelectionRange)
+            {
+                var sS = o.selectionStart;
+                var sE = o.selectionEnd;
+                o.value = o.value.substring(0, sS) + "\t" + o.value.substr(sE);
+                o.setSelectionRange(sS + 1, sS + 1);
+                o.focus();
+            }
+            else if (o.createTextRange)
+            {
+                document.selection.createRange().text = "\t";
+                e.returnValue = false;
+            }
+            o.scrollTop = oS;
+            if (e.preventDefault)
+            {
+                e.preventDefault();
+            }
+            return false;
+        }
+        return true;
+    }
+
+
+
+
+</script>
+
+<form action="/framestudent/updateframe" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="7NFGSh5ACr5rpNiW0F6k0Xj9AyWX+ZvXzXC1akAKscbbxIpaLY7vTJaDulSnTf0TZYOxzbT7DC2QfElOpmL1Bw==" />
+    <div id="line">
+      <input type="hidden" name="id" id="id" value="818" />
+
+
+<table border="2px" align="center">
+   <caption><b> <label for="________:_________1">Название: Задание 1</label></b></caption>
+			<tr>
+				<td>Интерпретатор</td>			
+				<td>Словарь</td>			
+				<td>Вывод</td>			
+			</tr>
+      <tr>
+      
+      	 	<td><textarea name="studentcode" id="studentcode" autofocus="autofocus" rows="25" cols="105" onkeydown="insertTab(this, event)" maxlength="2500">
+(fassert Адрес
+
+(classification value (generic))
+
+(улица (default (Москворечье)))
+
+(дом)
+
+(корпус (default(нет)))
+
+(квартира)
+
+)
+
+
+
+(fassert Студент
+
+(ako (value Адрес))
+
+(classification value (generic))
+
+(ФИО)
+
+(Университет (default(НИЯУ_МИФИ)))
+
+(Кафедра (default(Кибернетика)))
+
+)
+
+
+
+(fassert Преподаватель
+
+(ako (value Адрес))
+
+(classification value (generic))
+
+(ФИО)
+
+(Предмет)
+
+(Кафедра( default(Кибернетика)))
+
+)
+
+
+
+(fassert Студент1
+
+(ako (value Студент))
+
+(ФИО (value (ИвановИИ) ))
+
+(дом (value (7)))
+
+(квартира (value (45)))
+
+)
+
+
+
+(fassert Студент2
+
+(ako (value Студент))
+
+(ФИО (value (ПетровПП) ))
+
+(дом (value (7)))
+
+(квартира (value (44)))
+
+)
+
+
+
+(fassert Студент3
+
+(ako (value Студент))
+
+(ФИО (value (СидоровСС) ))
+
+(улица (value (Кавказский_бульвар)))
+
+(дом (value (7)))
+
+(корпус( value(3)))
+
+(квартира (value (54)))
+
+)
+
+
+
+(fassert Преподаватель1
+
+(ako (value Преподаватель))
+
+(Предмет (value (ПрограммированиеС)))
+
+(ФИО ( value( ПетровДС)))
+
+(улица( value( Москворечье)))
+
+(дом (value(8)))
+
+(корпус (value(1)))
+
+(квартира( value(54)))
+
+)
+
+
+
+(fassert Преподаватель2
+
+(ako (value Преподаватель))
+
+(Предмет (value (ПрограммированиеС)))
+
+(ФИО ( value( УшаковУУ)))
+
+(улица( value( Москворечье)))
+
+(дом (value(7)))
+
+(корпус (value(3)))
+
+(квартира( value(99)))
+
+)</textarea> </td>
+      
+					<td><textarea name="dictionary" id="dictionary" autofocus="autofocus" rows="25" cols="25" onkeydown="insertTab(this, event)">
+[&quot;Адрес&quot;, &quot;generic&quot;, &quot;улица&quot;, &quot;Москворечье&quot;, &quot;дом&quot;, &quot;корпус&quot;, &quot;нет&quot;, &quot;квартира&quot;, &quot;Студент&quot;, &quot;ako&quot;, &quot;ФИО&quot;, &quot;Университет&quot;, &quot;НИЯУ_МИФИ&quot;, &quot;Кафедра&quot;, &quot;Кибернетика&quot;, &quot;Преподаватель&quot;, &quot;Предмет&quot;, &quot;Студент1&quot;, &quot;7&quot;, &quot;45&quot;, &quot;ИвановИИ&quot;, &quot;Студент2&quot;, &quot;44&quot;, &quot;ПетровПП&quot;, &quot;Студент3&quot;, &quot;Кавказский_бульвар&quot;, &quot;3&quot;, &quot;54&quot;, &quot;СидоровСС&quot;, &quot;Преподаватель1&quot;, &quot;8&quot;, &quot;1&quot;, &quot;ПетровДС&quot;, &quot;ПрограммированиеС&quot;, &quot;Преподаватель2&quot;, &quot;99&quot;, &quot;УшаковУУ&quot;]</textarea></td>
+      		<td><textarea name="console" id="666" autofocus="autofocus" rows="25" cols="40" onkeydown="insertTab(this, event)">
+Ошибки в фрейме: []
+</textarea></td>
+      </tr>
+			<tr>
+				<td>      <input type="submit" name="commit" value="Транслировать" data-disable-with="Транслировать" />
+      						<input type="submit" name="commit" value="Завершить" data-disable-with="Завершить" /></td>
+			</tr>
+			<tr>
+				<td><textarea name="task" id="task" rows="25" cols="105" maxlength="2500">
+{ 
+
+  Задание :
+
+  Написать Фрейм прототип Адрес 
+
+  в котором есть следующие слоты улица (по умолчанию Москворечье), дом, корпус (по умолчанию нет, и квартира
+
+    Написать фрейм прототип студент, у которого есть адрес, ФИО, Университет по умолчанию НИЯУ_МИФИ, кафедра (по умолчанию Кибернетика) 
+
+
+
+  Написать фрейм прототип преподаватель, у которого есть адрес, ФИО, Предмет (Название предмета который он ведет), и кафедра ( по умолчанию Кибернетика)
+
+
+
+Написать фрейм Студент1 
+
+ФИО ИвановИИ
+
+Адрес Москворечье д7 кв45
+
+Университет МИФИ кафедра Кибернетика
+
+
+
+Написать фрейм Студент2
+
+ФИО ПетровПП
+
+Адрес Москворечье д7 кв44
+
+Университет МИФИ кафедра Кибернетика
+
+
+
+Написать фрейм Студент3
+
+ФИО СидоровСС
+
+Адрес Кавказский_бульвар д7 корп 3 кв54
+
+Университет МИФИ кафедра Кибернетика
+
+
+
+Написать фрейм Преподаватель1
+
+ФИО ПетровДС
+
+Адрес Москворечье д8 корп 1 кв54
+
+Университет МИФИ кафедра Кибернетика Предмет 
+
+ПрограммированиеС
+
+
+
+Написать фрейм Преподаватель2
+
+ФИО УшаковУУ
+
+Адрес Москворечьед7 корп 3 кв99
+
+Университет МИФИ кафедра Кибернетика Предмет 
+
+ПрограммированиеС
+
+
+
+ }</textarea> </td>
+				<td><table border="2px">
+
+
+</table>
+</td>
+			</tr>
+
+</table>
+
+
+
+
+
+
+      <br>
+
+
+
+
+    </div>
+</form>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>UIR</title>
+  <link rel="stylesheet" media="all" href="/assets/application-a441a02d4d30c8baac6c150f7ac001e281a1b2901f55029138b11a1f9920c1da.css" data-turbolinks-track="true" />
+  <script src="/assets/application-768300f821892a7d121cd2bc3ea41884e332e830d146431b503b03c2595fb5d7.js" data-turbolinks-track="true"></script>
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="RaT8eQq2pckhkqQUFpQzSGWft5HYRnfM2gj2w3TmRjdysTBpOXhAO9y1xtZhh2qKeOEFeftE4DaHBArnko4C9g==" />
+</head>
+<body>
+Оценка : 100.0
+Ошибки : []
+
+
+
+<link rel="stylesheet" media="screen" href="/assets/framestud-04024382391bb910584145d8113cf35ef376b55d125bb4516cebeb14ce788597.css" />
+<br>
+ <div align="center"> Время(<label id="min" contentEditable=true></label>:<label id="sec" contentEditable=true></label>:<label id="complete" contentEditable=true></label>) </div>
+
+
+<script>
+
+
+
+
+    var mytime = -8345
+    var minutes =  (mytime/60).toFixed(0);
+    var seconds =  (mytime % 60);
+    //alert(minutes)
+    //alert(seconds)
+    //alert("-8345")
+    //alert ("2022-11-29 17:24:17 +0300" + " " + "2022-11-29 14:50:12 +0300")
+    //alert(min + " " + sec)
+    var time = []
+    time.push(minutes);
+    time.push(seconds);
+    timerId = setInterval(function() {
+
+        time[1] --;
+        if (time[1] < 0)
+        {
+            time[1] = 59
+            time[0] --;
+        }
+        $("#min").text(time[0]);
+        $("#sec").text(time[1]);
+        if (time[0] <= 0)
+        {
+            $("#complete").text("ЗАВЕРШИТЬ");
+            $("#min").text(0);
+            $("#sec").text(0);
+
+        }
+
+
+    }, 1000);
+
+</script>
+
+
+<script>
+
+    function insertTab(o, e)
+    {
+        var kC = e.keyCode ? e.keyCode : e.charCode ? e.charCode : e.which;
+        if (kC == 9 && !e.shiftKey && !e.ctrlKey && !e.altKey)
+        {
+            var oS = o.scrollTop;
+            if (o.setSelectionRange)
+            {
+                var sS = o.selectionStart;
+                var sE = o.selectionEnd;
+                o.value = o.value.substring(0, sS) + "\t" + o.value.substr(sE);
+                o.setSelectionRange(sS + 1, sS + 1);
+                o.focus();
+            }
+            else if (o.createTextRange)
+            {
+                document.selection.createRange().text = "\t";
+                e.returnValue = false;
+            }
+            o.scrollTop = oS;
+            if (e.preventDefault)
+            {
+                e.preventDefault();
+            }
+            return false;
+        }
+        return true;
+    }
+
+
+
+
+</script>
+
+<form action="/framestudent/updateframe" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="C6Wt595L/UtaGlQvO5llwlOKSX5G8/wFtDqXc9rZifU8sGH37YUYuac9Nu1MijwATvT7lmXxa//pNmtXPLHNNA==" />
+    <div id="line">
+      <input type="hidden" name="id" id="id" value="820" />
+
+
+<table border="2px" align="center">
+   <caption><b> <label for="________:_________1">Название: Задание 1</label></b></caption>
+			<tr>
+				<td>Интерпретатор</td>			
+				<td>Словарь</td>			
+				<td>Вывод</td>			
+			</tr>
+      <tr>
+      
+      	 	<td><textarea name="studentcode" id="studentcode" autofocus="autofocus" rows="25" cols="105" onkeydown="insertTab(this, event)" maxlength="2500">
+(fassert Адрес 
+
+	(classification value (generic))
+
+	(улица (default (Москворечье)))
+
+	(дом)
+
+	(корпус(default (нет)))
+
+	(квартира)
+
+)
+
+
+
+(fassert Студент
+
+	(ako (value Адрес))
+
+	(classification value (generic))
+
+	(ФИО)
+
+	(Университет (default (НИЯУ_МИФИ)))
+
+	(Кафедра (default (Кибернетика)))
+
+)
+
+
+
+(fassert Преподаватель
+
+	(ako (value Адрес))
+
+	(classification value (generic))
+
+	(ФИО)
+
+	(Предмет)
+
+	(Кафедра (default (Кибернетика)))
+
+)
+
+
+
+(fassert Студент1
+
+	(ako (value Студент))
+
+	(ФИО (value(ИвановИИ)))
+
+	(улица (value (Москворечье)))
+
+	(дом (value (7)))
+
+	(квартира (value (45)))	
+
+	(Университет (value (НИЯУ_МИФИ)))
+
+	(Кафедра (value (Кибернетика)))
+
+)
+
+
+
+(fassert Студент2
+
+	(ako (value Студент))
+
+	(ФИО (value(ПетровПП)))
+
+	(улица (value (Москворечье)))
+
+	(дом (value (7)))
+
+	(квартира (value (44)))	
+
+	(Университет (value (НИЯУ_МИФИ)))
+
+	(Кафедра (value (Кибернетика)))
+
+)
+
+
+
+(fassert Студент3
+
+	(ako (value Студент))
+
+	(ФИО (value(СидоровСС)))
+
+	(улица (value (Кавказский_бульвар)))
+
+	(дом (value (7)))
+
+	(корпус (value (3)))	
+
+	(квартира (value (54)))	
+
+	(Университет (value (НИЯУ_МИФИ)))
+
+	(Кафедра (value (Кибернетика)))
+
+)
+
+
+
+(fassert Преподаватель1
+
+	(ako (value Преподаватель))
+
+	(ФИО (value(ПетровДС)))
+
+	(улица (value (Москворечье)))
+
+	(дом (value (8)))
+
+	(корпус (value (1)))	
+
+	(квартира (value (54)))	
+
+	(Предмет (value (ПрограммированиеС)))
+
+	(Кафедра (value (Кибернетика)))
+
+)
+
+
+
+(fassert Преподаватель2
+
+	(ako (value Преподаватель))
+
+	(ФИО (value(УшаковУУ)))
+
+	(улица (value (Москворечье)))
+
+	(дом (value (7)))
+
+	(корпус (value (3)))	
+
+	(квартира (value (99)))	
+
+	(Предмет (value (ПрограммированиеС)))
+
+	(Кафедра (value (Кибернетика)))
+
+)</textarea> </td>
+      
+					<td><textarea name="dictionary" id="dictionary" autofocus="autofocus" rows="25" cols="25" onkeydown="insertTab(this, event)">
+[&quot;Адрес&quot;, &quot;generic&quot;, &quot;улица&quot;, &quot;Москворечье&quot;, &quot;дом&quot;, &quot;корпус&quot;, &quot;нет&quot;, &quot;квартира&quot;, &quot;Студент&quot;, &quot;ako&quot;, &quot;ФИО&quot;, &quot;Университет&quot;, &quot;НИЯУ_МИФИ&quot;, &quot;Кафедра&quot;, &quot;Кибернетика&quot;, &quot;Преподаватель&quot;, &quot;Предмет&quot;, &quot;Студент1&quot;, &quot;7&quot;, &quot;45&quot;, &quot;ИвановИИ&quot;, &quot;Студент2&quot;, &quot;44&quot;, &quot;ПетровПП&quot;, &quot;Студент3&quot;, &quot;Кавказский_бульвар&quot;, &quot;3&quot;, &quot;54&quot;, &quot;СидоровСС&quot;, &quot;Преподаватель1&quot;, &quot;8&quot;, &quot;1&quot;, &quot;ПетровДС&quot;, &quot;ПрограммированиеС&quot;, &quot;Преподаватель2&quot;, &quot;99&quot;, &quot;УшаковУУ&quot;]</textarea></td>
+      		<td><textarea name="console" id="666" autofocus="autofocus" rows="25" cols="40" onkeydown="insertTab(this, event)">
+Ошибки в фрейме: []
+</textarea></td>
+      </tr>
+			<tr>
+				<td>      <input type="submit" name="commit" value="Транслировать" data-disable-with="Транслировать" />
+      						<input type="submit" name="commit" value="Завершить" data-disable-with="Завершить" /></td>
+			</tr>
+			<tr>
+				<td><textarea name="task" id="task" rows="25" cols="105" maxlength="2500">
+{ 
+
+  Задание :
+
+  Написать Фрейм прототип Адрес 
+
+  в котором есть следующие слоты улица (по умолчанию Москворечье), дом, корпус (по умолчанию нет, и квартира
+
+    Написать фрейм прототип студент, у которого есть адрес, ФИО, Университет по умолчанию НИЯУ_МИФИ, кафедра (по умолчанию Кибернетика) 
+
+
+
+  Написать фрейм прототип преподаватель, у которого есть адрес, ФИО, Предмет (Название предмета который он ведет), и кафедра ( по умолчанию Кибернетика)
+
+
+
+Написать фрейм Студент1 
+
+ФИО ИвановИИ
+
+Адрес Москворечье д7 кв45
+
+Университет МИФИ кафедра Кибернетика
+
+
+
+Написать фрейм Студент2
+
+ФИО ПетровПП
+
+Адрес Москворечье д7 кв44
+
+Университет МИФИ кафедра Кибернетика
+
+
+
+Написать фрейм Студент3
+
+ФИО СидоровСС
+
+Адрес Кавказский_бульвар д7 корп 3 кв54
+
+Университет МИФИ кафедра Кибернетика
+
+
+
+Написать фрейм Преподаватель1
+
+ФИО ПетровДС
+
+Адрес Москворечье д8 корп 1 кв54
+
+Университет МИФИ кафедра Кибернетика Предмет 
+
+ПрограммированиеС
+
+
+
+Написать фрейм Преподаватель2
+
+ФИО УшаковУУ
+
+Адрес Москворечьед7 корп 3 кв99
+
+Университет МИФИ кафедра Кибернетика Предмет 
+
+ПрограммированиеС
+
+
+
+ }</textarea> </td>
+				<td><table border="2px">
+
+
+</table>
+</td>
+			</tr>
+
+</table>
+
+
+
+
+
+
+      <br>
+
+
+
+
+    </div>
+</form>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>UIR</title>
+  <link rel="stylesheet" media="all" href="/assets/application-a441a02d4d30c8baac6c150f7ac001e281a1b2901f55029138b11a1f9920c1da.css" data-turbolinks-track="true" />
+  <script src="/assets/application-768300f821892a7d121cd2bc3ea41884e332e830d146431b503b03c2595fb5d7.js" data-turbolinks-track="true"></script>
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="W+mKmBfj8lsksCGDpHI/SzdkjWSmjbSqRpwAMUgBKoxs/EaIJC0XqdmXQ0HTYWaJKho/jIWPI1AbkPwVrmluTQ==" />
+</head>
+<body>
+Оценка : 100.0
+Ошибки : []
+
+
+
+<link rel="stylesheet" media="screen" href="/assets/framestud-04024382391bb910584145d8113cf35ef376b55d125bb4516cebeb14ce788597.css" />
+<br>
+ <div align="center"> Время(<label id="min" contentEditable=true></label>:<label id="sec" contentEditable=true></label>:<label id="complete" contentEditable=true></label>) </div>
+
+
+<script>
+
+
+
+
+    var mytime = -7263
+    var minutes =  (mytime/60).toFixed(0);
+    var seconds =  (mytime % 60);
+    //alert(minutes)
+    //alert(seconds)
+    //alert("-7263")
+    //alert ("2022-11-29 17:24:18 +0300" + " " + "2022-11-29 15:08:15 +0300")
+    //alert(min + " " + sec)
+    var time = []
+    time.push(minutes);
+    time.push(seconds);
+    timerId = setInterval(function() {
+
+        time[1] --;
+        if (time[1] < 0)
+        {
+            time[1] = 59
+            time[0] --;
+        }
+        $("#min").text(time[0]);
+        $("#sec").text(time[1]);
+        if (time[0] <= 0)
+        {
+            $("#complete").text("ЗАВЕРШИТЬ");
+            $("#min").text(0);
+            $("#sec").text(0);
+
+        }
+
+
+    }, 1000);
+
+</script>
+
+
+<script>
+
+    function insertTab(o, e)
+    {
+        var kC = e.keyCode ? e.keyCode : e.charCode ? e.charCode : e.which;
+        if (kC == 9 && !e.shiftKey && !e.ctrlKey && !e.altKey)
+        {
+            var oS = o.scrollTop;
+            if (o.setSelectionRange)
+            {
+                var sS = o.selectionStart;
+                var sE = o.selectionEnd;
+                o.value = o.value.substring(0, sS) + "\t" + o.value.substr(sE);
+                o.setSelectionRange(sS + 1, sS + 1);
+                o.focus();
+            }
+            else if (o.createTextRange)
+            {
+                document.selection.createRange().text = "\t";
+                e.returnValue = false;
+            }
+            o.scrollTop = oS;
+            if (e.preventDefault)
+            {
+                e.preventDefault();
+            }
+            return false;
+        }
+        return true;
+    }
+
+
+
+
+</script>
+
+<form action="/framestudent/updateframe" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="u5UoKjwrpfk4r9K4jnJ6laaNvK4vBcTXacCdpqUcGYCMgOQ6D+VAC8WIsHr5YSNXu/MORgwHUy00zGGCQ3RdQQ==" />
+    <div id="line">
+      <input type="hidden" name="id" id="id" value="825" />
+
+
+<table border="2px" align="center">
+   <caption><b> <label for="________:_________2">Название: Задание 2</label></b></caption>
+			<tr>
+				<td>Интерпретатор</td>			
+				<td>Словарь</td>			
+				<td>Вывод</td>			
+			</tr>
+      <tr>
+      
+      	 	<td><textarea name="studentcode" id="studentcode" autofocus="autofocus" rows="25" cols="105" onkeydown="insertTab(this, event)" maxlength="2500">
+(fassert место_добычи
+
+(classification value(generic))
+
+(место (default(мировой_океан) default(суша)))
+
+)
+
+(fget место_добычи)
+
+
+
+(fassert способы_добычи
+
+(classification value(generic))
+
+(способ (default(открытый) default(подземный) default(комбинированный)))
+
+)
+
+(fget способы_добычи)
+
+
+
+(fassert средства_добычи
+
+(classification value(generic))
+
+(средства (default(скважина) default(шахта)))
+
+)
+
+(fget средства_добычи)
+
+
+
+(fassert полезные_ископаемые
+
+(classification value(generic))
+
+(добыча (default(твердый) default(жидкий) default(газообразный)))
+
+)
+
+(fget полезные_ископаемые)
+
+
+
+(fassert добыча_полезных_ископаемых
+
+(classification value(generic))
+
+(ako (value место_добычи))
+
+(ako (value способы_добычи))
+
+(ako (value средства_добычи))
+
+(ako (value полезные_ископаемые))
+
+)
+
+(fget добыча_полезных_ископаемых)
+
+
+
+(fassert добыча_угля_в_шахте
+
+(ako (value добыча_полезных_ископаемых))
+
+(добыча(value(уголь)))
+
+(место(value(суша)))
+
+(способ(value(подъемный)))
+
+(средства(value(шахта)))
+
+)
+
+(fget добыча_угля_в_шахте)</textarea> </td>
+      
+					<td><textarea name="dictionary" id="dictionary" autofocus="autofocus" rows="25" cols="25" onkeydown="insertTab(this, event)">
+[&quot;место_добычи&quot;, &quot;generic&quot;, &quot;место&quot;, &quot;мировой_океан&quot;, &quot;суша&quot;, &quot;способы_добычи&quot;, &quot;способ&quot;, &quot;открытый&quot;, &quot;подземный&quot;, &quot;комбинированный&quot;, &quot;средства_добычи&quot;, &quot;средства&quot;, &quot;скважина&quot;, &quot;шахта&quot;, &quot;полезные_ископаемые&quot;, &quot;добыча&quot;, &quot;твердый&quot;, &quot;жидкий&quot;, &quot;газообразный&quot;, &quot;добыча_полезных_ископаемых&quot;, &quot;ako&quot;, &quot;добыча_угля_в_шахте&quot;, &quot;подъемный&quot;, &quot;уголь&quot;]</textarea></td>
+      		<td><textarea name="console" id="666" autofocus="autofocus" rows="25" cols="40" onkeydown="insertTab(this, event)">
+Ошибки в фрейме: []
+</textarea></td>
+      </tr>
+			<tr>
+				<td>      <input type="submit" name="commit" value="Транслировать" data-disable-with="Транслировать" />
+      						<input type="submit" name="commit" value="Завершить" data-disable-with="Завершить" /></td>
+			</tr>
+			<tr>
+				<td><textarea name="task" id="task" rows="25" cols="105" maxlength="2500">
+Задание 
+
+Создать фрейм прототип место_добычи 
+
+которые имеет одно поле &quot;место&quot; и несколько значений по умолчанию мировой_океан и суша
+
+
+
+Создать фрейм прототип способы_добычи
+
+которые имеет одно поле &quot;способ&quot; и несколько значений по умолчанию открытый подземный и комбинированный
+
+
+
+Создать фрейм прототип средства_добычи
+
+которые имеет одно поле &quot;средства&quot; и несколько значений по умолчанию скважина и шахта
+
+
+
+Создать фрейм прототип полезные_ископаемые
+
+которые имеет одно поле &quot;добыча&quot; и несколько значений по умолчанию твердый жидкий и газообразный
+
+
+
+Создать фрейм прототип добыча_полезных_ископаемых
+
+который наследует все свойства ранее созданных фреймов
+
+
+
+
+
+Создать добыча_угля_в_шахте  
+
+который наследуется от прототипного фрейма добыча_полезных_ископаемых 
+
+и имеет следующие значения в слотах:
+
+--
+
+добыча уголь
+
+место суша
+
+способ подъемный
+
+средства шахта
+
+--</textarea> </td>
+				<td><table border="2px">
+
+
+      <tr>
+        <td>frame:место_добычи</td>
+          <tr>
+            <td>classification:generic</td>
+            <td>[]</td>
+          </tr>
+          <tr>
+            <td>fslot:место</td>
+
+							
+
+							
+            <td>[&quot;default:мировой_океан&quot;, &quot;default:суша&quot;]</td>
+          </tr>
+      </tr>
+
+
+      <tr>
+        <td>frame:способы_добычи</td>
+          <tr>
+            <td>classification:generic</td>
+            <td>[]</td>
+          </tr>
+          <tr>
+            <td>fslot:способ</td>
+
+							
+
+							
+
+							
+            <td>[&quot;default:открытый&quot;, &quot;default:подземный&quot;, &quot;default:комбинированный&quot;]</td>
+          </tr>
+      </tr>
+
+
+      <tr>
+        <td>frame:средства_добычи</td>
+          <tr>
+            <td>classification:generic</td>
+            <td>[]</td>
+          </tr>
+          <tr>
+            <td>fslot:средства</td>
+
+							
+
+							
+            <td>[&quot;default:скважина&quot;, &quot;default:шахта&quot;]</td>
+          </tr>
+      </tr>
+
+
+      <tr>
+        <td>frame:полезные_ископаемые</td>
+          <tr>
+            <td>classification:generic</td>
+            <td>[]</td>
+          </tr>
+          <tr>
+            <td>fslot:добыча</td>
+
+							
+
+							
+
+							
+            <td>[&quot;default:твердый&quot;, &quot;default:жидкий&quot;, &quot;default:газообразный&quot;]</td>
+          </tr>
+      </tr>
+
+
+      <tr>
+        <td>frame:добыча_полезных_ископаемых</td>
+          <tr>
+            <td>classification:generic</td>
+            <td>[]</td>
+          </tr>
+          <tr>
+            <td>fslot:ako</td>
+
+							
+
+							
+
+							
+
+							
+            <td>[&quot;frame:место_добычи&quot;, &quot;frame:способы_добычи&quot;, &quot;frame:средства_добычи&quot;, &quot;frame:полезные_ископаемые&quot;]</td>
+          </tr>
+          <tr>
+            <td>fslot:место</td>
+
+							
+
+							
+            <td>[&quot;default:мировой_океан&quot;, &quot;default:суша&quot;]</td>
+          </tr>
+          <tr>
+            <td>fslot:способ</td>
+
+							
+
+							
+
+							
+            <td>[&quot;default:открытый&quot;, &quot;default:подземный&quot;, &quot;default:комбинированный&quot;]</td>
+          </tr>
+          <tr>
+            <td>fslot:средства</td>
+
+							
+
+							
+            <td>[&quot;default:скважина&quot;, &quot;default:шахта&quot;]</td>
+          </tr>
+          <tr>
+            <td>fslot:добыча</td>
+
+							
+
+							
+
+							
+            <td>[&quot;default:твердый&quot;, &quot;default:жидкий&quot;, &quot;default:газообразный&quot;]</td>
+          </tr>
+      </tr>
+
+
+      <tr>
+        <td>frame:добыча_угля_в_шахте</td>
+          <tr>
+            <td>fslot:ako</td>
+
+							
+            <td>[&quot;frame:добыча_полезных_ископаемых&quot;]</td>
+          </tr>
+          <tr>
+            <td>fslot:место</td>
+
+							
+            <td>[&quot;value:суша&quot;]</td>
+          </tr>
+          <tr>
+            <td>fslot:способ</td>
+
+							
+            <td>[&quot;value:подъемный&quot;]</td>
+          </tr>
+          <tr>
+            <td>fslot:средства</td>
+
+							
+            <td>[&quot;value:шахта&quot;]</td>
+          </tr>
+          <tr>
+            <td>fslot:добыча</td>
+
+							
+            <td>[&quot;value:уголь&quot;]</td>
+          </tr>
+      </tr>
+
+
+</table>
+</td>
+			</tr>
+
+</table>
+
+
+
+
+
+
+      <br>
+
+
+
+
+    </div>
+</form>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>UIR</title>
+  <link rel="stylesheet" media="all" href="/assets/application-a441a02d4d30c8baac6c150f7ac001e281a1b2901f55029138b11a1f9920c1da.css" data-turbolinks-track="true" />
+  <script src="/assets/application-768300f821892a7d121cd2bc3ea41884e332e830d146431b503b03c2595fb5d7.js" data-turbolinks-track="true"></script>
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="d8IGnhowGw1jdRpuTQJEO09DaTbchbgN71Rp2aLy9QJA18qOKf7+/55SeKw6ER35Uj3b3v+HL/eyWJX9RJqxww==" />
+</head>
+<body>
+Оценка : 100.0
+Ошибки : []
+
+
+
+<link rel="stylesheet" media="screen" href="/assets/framestud-04024382391bb910584145d8113cf35ef376b55d125bb4516cebeb14ce788597.css" />
+<br>
+ <div align="center"> Время(<label id="min" contentEditable=true></label>:<label id="sec" contentEditable=true></label>:<label id="complete" contentEditable=true></label>) </div>
+
+
+<script>
+
+
+
+
+    var mytime = -7125
+    var minutes =  (mytime/60).toFixed(0);
+    var seconds =  (mytime % 60);
+    //alert(minutes)
+    //alert(seconds)
+    //alert("-7125")
+    //alert ("2022-11-29 17:24:18 +0300" + " " + "2022-11-29 15:10:33 +0300")
+    //alert(min + " " + sec)
+    var time = []
+    time.push(minutes);
+    time.push(seconds);
+    timerId = setInterval(function() {
+
+        time[1] --;
+        if (time[1] < 0)
+        {
+            time[1] = 59
+            time[0] --;
+        }
+        $("#min").text(time[0]);
+        $("#sec").text(time[1]);
+        if (time[0] <= 0)
+        {
+            $("#complete").text("ЗАВЕРШИТЬ");
+            $("#min").text(0);
+            $("#sec").text(0);
+
+        }
+
+
+    }, 1000);
+
+</script>
+
+
+<script>
+
+    function insertTab(o, e)
+    {
+        var kC = e.keyCode ? e.keyCode : e.charCode ? e.charCode : e.which;
+        if (kC == 9 && !e.shiftKey && !e.ctrlKey && !e.altKey)
+        {
+            var oS = o.scrollTop;
+            if (o.setSelectionRange)
+            {
+                var sS = o.selectionStart;
+                var sE = o.selectionEnd;
+                o.value = o.value.substring(0, sS) + "\t" + o.value.substr(sE);
+                o.setSelectionRange(sS + 1, sS + 1);
+                o.focus();
+            }
+            else if (o.createTextRange)
+            {
+                document.selection.createRange().text = "\t";
+                e.returnValue = false;
+            }
+            o.scrollTop = oS;
+            if (e.preventDefault)
+            {
+                e.preventDefault();
+            }
+            return false;
+        }
+        return true;
+    }
+
+
+
+
+</script>
+
+<form action="/framestudent/updateframe" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="7NxTkOSn3y5NEDg2bdC++DjRqaqNLtTZ/kpCnjhkFxrbyZ+A12k63LA3WvQaw+c6Ja8bQq4sQyOjRr663gxT2w==" />
+    <div id="line">
+      <input type="hidden" name="id" id="id" value="826" />
+
+
+<table border="2px" align="center">
+   <caption><b> <label for="________:_________2">Название: Задание 2</label></b></caption>
+			<tr>
+				<td>Интерпретатор</td>			
+				<td>Словарь</td>			
+				<td>Вывод</td>			
+			</tr>
+      <tr>
+      
+      	 	<td><textarea name="studentcode" id="studentcode" autofocus="autofocus" rows="25" cols="105" onkeydown="insertTab(this, event)" maxlength="2500">
+(fassert место_добычи
+
+(classification value(generic))
+
+(место (default(мировой_океан) default(суша)))
+
+)
+
+(fget место_добычи)
+
+
+
+(fassert способы_добычи
+
+(classification value(generic))
+
+(способ (default(открытый) default(подземный) default(комбинированный)))
+
+)
+
+(fget способы_добычи)
+
+
+
+(fassert средства_добычи
+
+(classification value(generic))
+
+(средства (default(скважина) default(шахта)))
+
+)
+
+(fget средства_добычи)
+
+
+
+(fassert полезные_ископаемые
+
+(classification value(generic))
+
+(добыча (default(твердый) default(жидкий) default(газообразный)))
+
+)
+
+(fget полезные_ископаемые)
+
+
+
+(fassert добыча_полезных_ископаемых
+
+(classification value(generic))
+
+(ako (value место_добычи))
+
+(ako (value способы_добычи))
+
+(ako (value средства_добычи))
+
+(ako (value полезные_ископаемые))
+
+)
+
+(fget добыча_полезных_ископаемых)
+
+
+
+(fassert добыча_угля_в_шахте
+
+(ako (value добыча_полезных_ископаемых))
+
+(добыча (value(уголь)))
+
+(место (value(суша)))
+
+(способ (value(подъемный)))
+
+(средства (value(шахта)))
+
+)
+
+(fget добыча_угля_в_шахте)
+
+</textarea> </td>
+      
+					<td><textarea name="dictionary" id="dictionary" autofocus="autofocus" rows="25" cols="25" onkeydown="insertTab(this, event)">
+[&quot;место_добычи&quot;, &quot;generic&quot;, &quot;место&quot;, &quot;мировой_океан&quot;, &quot;суша&quot;, &quot;способы_добычи&quot;, &quot;способ&quot;, &quot;открытый&quot;, &quot;подземный&quot;, &quot;комбинированный&quot;, &quot;средства_добычи&quot;, &quot;средства&quot;, &quot;скважина&quot;, &quot;шахта&quot;, &quot;полезные_ископаемые&quot;, &quot;добыча&quot;, &quot;твердый&quot;, &quot;жидкий&quot;, &quot;газообразный&quot;, &quot;добыча_полезных_ископаемых&quot;, &quot;ako&quot;, &quot;добыча_угля_в_шахте&quot;, &quot;подъемный&quot;, &quot;уголь&quot;]</textarea></td>
+      		<td><textarea name="console" id="666" autofocus="autofocus" rows="25" cols="40" onkeydown="insertTab(this, event)">
+Ошибки в фрейме: []
+</textarea></td>
+      </tr>
+			<tr>
+				<td>      <input type="submit" name="commit" value="Транслировать" data-disable-with="Транслировать" />
+      						<input type="submit" name="commit" value="Завершить" data-disable-with="Завершить" /></td>
+			</tr>
+			<tr>
+				<td><textarea name="task" id="task" rows="25" cols="105" maxlength="2500">
+Задание 
+
+Создать фрейм прототип место_добычи 
+
+которые имеет одно поле &quot;место&quot; и несколько значений по умолчанию мировой_океан и суша
+
+
+
+Создать фрейм прототип способы_добычи
+
+которые имеет одно поле &quot;способ&quot; и несколько значений по умолчанию открытый подземный и комбинированный
+
+
+
+Создать фрейм прототип средства_добычи
+
+которые имеет одно поле &quot;средства&quot; и несколько значений по умолчанию скважина и шахта
+
+
+
+Создать фрейм прототип полезные_ископаемые
+
+которые имеет одно поле &quot;добыча&quot; и несколько значений по умолчанию твердый жидкий и газообразный
+
+
+
+Создать фрейм прототип добыча_полезных_ископаемых
+
+который наследует все свойства ранее созданных фреймов
+
+
+
+
+
+Создать добыча_угля_в_шахте  
+
+который наследуется от прототипного фрейма добыча_полезных_ископаемых 
+
+и имеет следующие значения в слотах:
+
+--
+
+добыча уголь
+
+место суша
+
+способ подъемный
+
+средства шахта
+
+--</textarea> </td>
+				<td><table border="2px">
+
+
+      <tr>
+        <td>frame:место_добычи</td>
+          <tr>
+            <td>classification:generic</td>
+            <td>[]</td>
+          </tr>
+          <tr>
+            <td>fslot:место</td>
+
+							
+
+							
+            <td>[&quot;default:мировой_океан&quot;, &quot;default:суша&quot;]</td>
+          </tr>
+      </tr>
+
+
+      <tr>
+        <td>frame:способы_добычи</td>
+          <tr>
+            <td>classification:generic</td>
+            <td>[]</td>
+          </tr>
+          <tr>
+            <td>fslot:способ</td>
+
+							
+
+							
+
+							
+            <td>[&quot;default:открытый&quot;, &quot;default:подземный&quot;, &quot;default:комбинированный&quot;]</td>
+          </tr>
+      </tr>
+
+
+      <tr>
+        <td>frame:средства_добычи</td>
+          <tr>
+            <td>classification:generic</td>
+            <td>[]</td>
+          </tr>
+          <tr>
+            <td>fslot:средства</td>
+
+							
+
+							
+            <td>[&quot;default:скважина&quot;, &quot;default:шахта&quot;]</td>
+          </tr>
+      </tr>
+
+
+      <tr>
+        <td>frame:полезные_ископаемые</td>
+          <tr>
+            <td>classification:generic</td>
+            <td>[]</td>
+          </tr>
+          <tr>
+            <td>fslot:добыча</td>
+
+							
+
+							
+
+							
+            <td>[&quot;default:твердый&quot;, &quot;default:жидкий&quot;, &quot;default:газообразный&quot;]</td>
+          </tr>
+      </tr>
+
+
+      <tr>
+        <td>frame:добыча_полезных_ископаемых</td>
+          <tr>
+            <td>classification:generic</td>
+            <td>[]</td>
+          </tr>
+          <tr>
+            <td>fslot:ako</td>
+
+							
+
+							
+
+							
+
+							
+            <td>[&quot;frame:место_добычи&quot;, &quot;frame:способы_добычи&quot;, &quot;frame:средства_добычи&quot;, &quot;frame:полезные_ископаемые&quot;]</td>
+          </tr>
+          <tr>
+            <td>fslot:место</td>
+
+							
+
+							
+            <td>[&quot;default:мировой_океан&quot;, &quot;default:суша&quot;]</td>
+          </tr>
+          <tr>
+            <td>fslot:способ</td>
+
+							
+
+							
+
+							
+            <td>[&quot;default:открытый&quot;, &quot;default:подземный&quot;, &quot;default:комбинированный&quot;]</td>
+          </tr>
+          <tr>
+            <td>fslot:средства</td>
+
+							
+
+							
+            <td>[&quot;default:скважина&quot;, &quot;default:шахта&quot;]</td>
+          </tr>
+          <tr>
+            <td>fslot:добыча</td>
+
+							
+
+							
+
+							
+            <td>[&quot;default:твердый&quot;, &quot;default:жидкий&quot;, &quot;default:газообразный&quot;]</td>
+          </tr>
+      </tr>
+
+
+      <tr>
+        <td>frame:добыча_угля_в_шахте</td>
+          <tr>
+            <td>fslot:ako</td>
+
+							
+            <td>[&quot;frame:добыча_полезных_ископаемых&quot;]</td>
+          </tr>
+          <tr>
+            <td>fslot:место</td>
+
+							
+            <td>[&quot;value:суша&quot;]</td>
+          </tr>
+          <tr>
+            <td>fslot:способ</td>
+
+							
+            <td>[&quot;value:подъемный&quot;]</td>
+          </tr>
+          <tr>
+            <td>fslot:средства</td>
+
+							
+            <td>[&quot;value:шахта&quot;]</td>
+          </tr>
+          <tr>
+            <td>fslot:добыча</td>
+
+							
+            <td>[&quot;value:уголь&quot;]</td>
+          </tr>
+      </tr>
+
+
+</table>
+</td>
+			</tr>
+
+</table>
+
+
+
+
+
+
+      <br>
+
+
+
+
+    </div>
+</form>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>UIR</title>
+  <link rel="stylesheet" media="all" href="/assets/application-a441a02d4d30c8baac6c150f7ac001e281a1b2901f55029138b11a1f9920c1da.css" data-turbolinks-track="true" />
+  <script src="/assets/application-768300f821892a7d121cd2bc3ea41884e332e830d146431b503b03c2595fb5d7.js" data-turbolinks-track="true"></script>
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="v3/LRqSTg3czB4L6K26EaMvseMQl+1KUllMUjnXpzyuIagdWl11mhc4g4Dhcfd2q1pLKLAb5xW7LX+iqk4GL6g==" />
+</head>
+<body>
+Оценка : 85.78947368421052
+Ошибки : []
+
+
+
+<link rel="stylesheet" media="screen" href="/assets/framestud-04024382391bb910584145d8113cf35ef376b55d125bb4516cebeb14ce788597.css" />
+<br>
+ <div align="center"> Время(<label id="min" contentEditable=true></label>:<label id="sec" contentEditable=true></label>:<label id="complete" contentEditable=true></label>) </div>
+
+
+<script>
+
+
+
+
+    var mytime = -7124
+    var minutes =  (mytime/60).toFixed(0);
+    var seconds =  (mytime % 60);
+    //alert(minutes)
+    //alert(seconds)
+    //alert("-7124")
+    //alert ("2022-11-29 17:24:18 +0300" + " " + "2022-11-29 15:10:34 +0300")
+    //alert(min + " " + sec)
+    var time = []
+    time.push(minutes);
+    time.push(seconds);
+    timerId = setInterval(function() {
+
+        time[1] --;
+        if (time[1] < 0)
+        {
+            time[1] = 59
+            time[0] --;
+        }
+        $("#min").text(time[0]);
+        $("#sec").text(time[1]);
+        if (time[0] <= 0)
+        {
+            $("#complete").text("ЗАВЕРШИТЬ");
+            $("#min").text(0);
+            $("#sec").text(0);
+
+        }
+
+
+    }, 1000);
+
+</script>
+
+
+<script>
+
+    function insertTab(o, e)
+    {
+        var kC = e.keyCode ? e.keyCode : e.charCode ? e.charCode : e.which;
+        if (kC == 9 && !e.shiftKey && !e.ctrlKey && !e.altKey)
+        {
+            var oS = o.scrollTop;
+            if (o.setSelectionRange)
+            {
+                var sS = o.selectionStart;
+                var sE = o.selectionEnd;
+                o.value = o.value.substring(0, sS) + "\t" + o.value.substr(sE);
+                o.setSelectionRange(sS + 1, sS + 1);
+                o.focus();
+            }
+            else if (o.createTextRange)
+            {
+                document.selection.createRange().text = "\t";
+                e.returnValue = false;
+            }
+            o.scrollTop = oS;
+            if (e.preventDefault)
+            {
+                e.preventDefault();
+            }
+            return false;
+        }
+        return true;
+    }
+
+
+
+
+</script>
+
+<form action="/framestudent/updateframe" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="HFEF21dBIjy7ldyzeoWUuZbcPhkYuQN1OmmhVktxPEcrRMnLZI/HzkayvnENls17i6KM8Tu7lI9nZV1yrRl4hg==" />
+    <div id="line">
+      <input type="hidden" name="id" id="id" value="827" />
+
+
+<table border="2px" align="center">
+   <caption><b> <label for="________:_________3">Название: Задание 3</label></b></caption>
+			<tr>
+				<td>Интерпретатор</td>			
+				<td>Словарь</td>			
+				<td>Вывод</td>			
+			</tr>
+      <tr>
+      
+      	 	<td><textarea name="studentcode" id="studentcode" autofocus="autofocus" rows="25" cols="105" onkeydown="insertTab(this, event)" maxlength="2500">
+(fassert место_рыбалки
+
+(classification value(generic))
+
+(место (default (море) default (озеро) default (океан) default (река)))
+
+)
+
+
+
+(fassert средства_ловли
+
+(classification value(generic))
+
+(средства (default (спиннинг) default (лодка) default (червяк) default (наживка)))
+
+)
+
+
+
+(fassert рыба
+
+(classification value(generic))
+
+(вид (default (хищная) default (полухищная) default (травоядная)))
+
+)
+
+
+
+(fassert рыбалка_на_пресных_водоемах
+
+(classification value(generic))
+
+(ako (value место_рыбалки))
+
+(ako (value средства_ловли))
+
+(ako (value рыба))
+
+(рыбак  (default (профессионал) default (любитель) default (спортсмен)))
+
+)
+
+
+
+(fassert любительская_рыбалка_на_реке_обь
+
+(ako (value рыбалка_на_пресных_водоемах))
+
+(место (value (река_обь)))
+
+(рыбак (value (любитель)))
+
+)
+
+(fget любительская_рыбалка_на_реке_обь)</textarea> </td>
+      
+					<td><textarea name="dictionary" id="dictionary" autofocus="autofocus" rows="25" cols="25" onkeydown="insertTab(this, event)">
+[&quot;место_рыбалки&quot;, &quot;generic&quot;, &quot;место&quot;, &quot;море&quot;, &quot;озеро&quot;, &quot;океан&quot;, &quot;река&quot;, &quot;средства_ловли&quot;, &quot;способ&quot;, &quot;спиннинг&quot;, &quot;лодка&quot;, &quot;червяк&quot;, &quot;наживка&quot;, &quot;рыба&quot;, &quot;вид&quot;, &quot;травоядная&quot;, &quot;хищная&quot;, &quot;полухищная&quot;, &quot;рыбалка_на_пресных_водоемах&quot;, &quot;ako&quot;, &quot;рыбак&quot;, &quot;профессионал&quot;, &quot;любитель&quot;, &quot;спортсмен&quot;, &quot;любительская_рыбалка_на_реке_обь&quot;, &quot;река_обь&quot;]</textarea></td>
+      		<td><textarea name="console" id="666" autofocus="autofocus" rows="25" cols="40" onkeydown="insertTab(this, event)">
+Ошибки в фрейме: []
+</textarea></td>
+      </tr>
+			<tr>
+				<td>      <input type="submit" name="commit" value="Транслировать" data-disable-with="Транслировать" />
+      						<input type="submit" name="commit" value="Завершить" data-disable-with="Завершить" /></td>
+			</tr>
+			<tr>
+				<td><textarea name="task" id="task" rows="25" cols="105" maxlength="2500">
+Задание 
+
+Создать фрейм прототип место_рыбалки
+
+которые имеет одно поле &quot;место&quot; и несколько значений по умолчанию море озеро океан река
+
+
+
+Создать фрейм прототип средства_ловли
+
+которые имеет одно поле &quot;средства&quot; и несколько значений по умолчанию спиннинг лодка червяк наживка 
+
+
+
+Создать фрейм прототип рыба
+
+которые имеет одно поле &quot;вид&quot; и несколько значений по умолчанию хищная полухищная травоядная
+
+
+
+Создать фрейм прототип рыбалка_на_пресных_водоемах
+
+который наследует все свойства ранее созданных фреймов
+
+а так же имеет поле &quot;рыбак&quot; и несколько значений по умолчанию профессионал любитель спортсмен
+
+
+
+создать фрейм любительская_рыбалка_на_реке_обь 
+
+который наследует все свойства рыбалка_на_пресных_водоемах
+
+а и имеет следующие значения
+
+-----
+
+место река_обь
+
+рыбак любитель
+
+-----</textarea> </td>
+				<td><table border="2px">
+
+
+      <tr>
+        <td>frame:любительская_рыбалка_на_реке_обь</td>
+          <tr>
+            <td>fslot:ako</td>
+
+							
+            <td>[&quot;frame:рыбалка_на_пресных_водоемах&quot;]</td>
+          </tr>
+          <tr>
+            <td>fslot:место</td>
+
+							
+            <td>[&quot;value:река_обь&quot;]</td>
+          </tr>
+          <tr>
+            <td>fslot:средства</td>
+
+							
+
+							
+
+							
+
+							
+            <td>[&quot;value:спиннинг&quot;, &quot;value:лодка&quot;, &quot;value:червяк&quot;, &quot;value:наживка&quot;]</td>
+          </tr>
+          <tr>
+            <td>fslot:вид</td>
+
+							
+
+							
+
+							
+            <td>[&quot;value:хищная&quot;, &quot;value:полухищная&quot;, &quot;value:травоядная&quot;]</td>
+          </tr>
+          <tr>
+            <td>fslot:рыбак</td>
+
+							
+            <td>[&quot;value:любитель&quot;]</td>
+          </tr>
+      </tr>
+
+
+</table>
+</td>
+			</tr>
+
+</table>
+
+
+
+
+
+
+      <br>
+
+
+
+
+    </div>
+</form>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>UIR</title>
+  <link rel="stylesheet" media="all" href="/assets/application-a441a02d4d30c8baac6c150f7ac001e281a1b2901f55029138b11a1f9920c1da.css" data-turbolinks-track="true" />
+  <script src="/assets/application-768300f821892a7d121cd2bc3ea41884e332e830d146431b503b03c2595fb5d7.js" data-turbolinks-track="true"></script>
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="ju0l5VwFOWEOsFuDM9uwdyox20q4dPRReg4nlmFG/be5+On1b8vck/OXOUFEyOm1N09popt2Y6snAtuyhy65dg==" />
+</head>
+<body>
+Оценка : 83.42105263157895
+Ошибки : []
+
+
+
+<link rel="stylesheet" media="screen" href="/assets/framestud-04024382391bb910584145d8113cf35ef376b55d125bb4516cebeb14ce788597.css" />
+<br>
+ <div align="center"> Время(<label id="min" contentEditable=true></label>:<label id="sec" contentEditable=true></label>:<label id="complete" contentEditable=true></label>) </div>
+
+
+<script>
+
+
+
+
+    var mytime = -6987
+    var minutes =  (mytime/60).toFixed(0);
+    var seconds =  (mytime % 60);
+    //alert(minutes)
+    //alert(seconds)
+    //alert("-6987")
+    //alert ("2022-11-29 17:24:18 +0300" + " " + "2022-11-29 15:12:51 +0300")
+    //alert(min + " " + sec)
+    var time = []
+    time.push(minutes);
+    time.push(seconds);
+    timerId = setInterval(function() {
+
+        time[1] --;
+        if (time[1] < 0)
+        {
+            time[1] = 59
+            time[0] --;
+        }
+        $("#min").text(time[0]);
+        $("#sec").text(time[1]);
+        if (time[0] <= 0)
+        {
+            $("#complete").text("ЗАВЕРШИТЬ");
+            $("#min").text(0);
+            $("#sec").text(0);
+
+        }
+
+
+    }, 1000);
+
+</script>
+
+
+<script>
+
+    function insertTab(o, e)
+    {
+        var kC = e.keyCode ? e.keyCode : e.charCode ? e.charCode : e.which;
+        if (kC == 9 && !e.shiftKey && !e.ctrlKey && !e.altKey)
+        {
+            var oS = o.scrollTop;
+            if (o.setSelectionRange)
+            {
+                var sS = o.selectionStart;
+                var sE = o.selectionEnd;
+                o.value = o.value.substring(0, sS) + "\t" + o.value.substr(sE);
+                o.setSelectionRange(sS + 1, sS + 1);
+                o.focus();
+            }
+            else if (o.createTextRange)
+            {
+                document.selection.createRange().text = "\t";
+                e.returnValue = false;
+            }
+            o.scrollTop = oS;
+            if (e.preventDefault)
+            {
+                e.preventDefault();
+            }
+            return false;
+        }
+        return true;
+    }
+
+
+
+
+</script>
+
+<form action="/framestudent/updateframe" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="u0OudmWfJ8rFQW8uxBryzcq4QV0XmnrAQcbu5CvnL7WMVmJmVlHCODhmDeyzCasP18bztTSY7TocyhLAzY9rdA==" />
+    <div id="line">
+      <input type="hidden" name="id" id="id" value="829" />
+
+
+<table border="2px" align="center">
+   <caption><b> <label for="________:_________3">Название: Задание 3</label></b></caption>
+			<tr>
+				<td>Интерпретатор</td>			
+				<td>Словарь</td>			
+				<td>Вывод</td>			
+			</tr>
+      <tr>
+      
+      	 	<td><textarea name="studentcode" id="studentcode" autofocus="autofocus" rows="25" cols="105" onkeydown="insertTab(this, event)" maxlength="2500">
+(fassert место_рыбалки
+
+(classification value(generic))
+
+(место (default (море) default (океан) default (река)))
+
+)
+
+
+
+(fassert средства_ловли
+
+(classification value(generic))
+
+(средства (default (спиннинг) default (лодка) default (червяк) default (наживка)))
+
+)
+
+
+
+(fassert рыба
+
+(classification value(generic))
+
+(вид (default (хищная) default (лодка) default (полухищная) default (травоядная)))
+
+)
+
+
+
+(fassert рыбалка_на_пресных_водоемах
+
+(classification value(generic))
+
+(ako (value место_рыбалки))
+
+(ako (value средства_ловли))
+
+(ako (value рыба))
+
+(рыбак (default (профессионал) default (любитель) default (спортсмен)))
+
+)
+
+
+
+(fassert любительская_рыбалка_на_реке_обь
+
+(ako (value рыбалка_на_пресных_водоемах))
+
+(место (value (река_обь)))
+
+(рыбак (value (любитель)))
+
+)</textarea> </td>
+      
+					<td><textarea name="dictionary" id="dictionary" autofocus="autofocus" rows="25" cols="25" onkeydown="insertTab(this, event)">
+[&quot;место_рыбалки&quot;, &quot;generic&quot;, &quot;место&quot;, &quot;море&quot;, &quot;озеро&quot;, &quot;океан&quot;, &quot;река&quot;, &quot;средства_ловли&quot;, &quot;способ&quot;, &quot;спиннинг&quot;, &quot;лодка&quot;, &quot;червяк&quot;, &quot;наживка&quot;, &quot;рыба&quot;, &quot;вид&quot;, &quot;травоядная&quot;, &quot;хищная&quot;, &quot;полухищная&quot;, &quot;рыбалка_на_пресных_водоемах&quot;, &quot;ako&quot;, &quot;рыбак&quot;, &quot;профессионал&quot;, &quot;любитель&quot;, &quot;спортсмен&quot;, &quot;любительская_рыбалка_на_реке_обь&quot;, &quot;река_обь&quot;]</textarea></td>
+      		<td><textarea name="console" id="666" autofocus="autofocus" rows="25" cols="40" onkeydown="insertTab(this, event)">
+Ошибки в фрейме: []
+</textarea></td>
+      </tr>
+			<tr>
+				<td>      <input type="submit" name="commit" value="Транслировать" data-disable-with="Транслировать" />
+      						<input type="submit" name="commit" value="Завершить" data-disable-with="Завершить" /></td>
+			</tr>
+			<tr>
+				<td><textarea name="task" id="task" rows="25" cols="105" maxlength="2500">
+Задание 
+
+Создать фрейм прототип место_рыбалки
+
+которые имеет одно поле &quot;место&quot; и несколько значений по умолчанию море озеро океан река
+
+
+
+Создать фрейм прототип средства_ловли
+
+которые имеет одно поле &quot;средства&quot; и несколько значений по умолчанию спиннинг лодка червяк наживка 
+
+
+
+Создать фрейм прототип рыба
+
+которые имеет одно поле &quot;вид&quot; и несколько значений по умолчанию хищная полухищная травоядная
+
+
+
+Создать фрейм прототип рыбалка_на_пресных_водоемах
+
+который наследует все свойства ранее созданных фреймов
+
+а так же имеет поле &quot;рыбак&quot; и несколько значений по умолчанию профессионал любитель спортсмен
+
+
+
+создать фрейм любительская_рыбалка_на_реке_обь 
+
+который наследует все свойства рыбалка_на_пресных_водоемах
+
+а и имеет следующие значения
+
+-----
+
+место река_обь
+
+рыбак любитель
+
+-----</textarea> </td>
+				<td><table border="2px">
+
+
+</table>
+</td>
+			</tr>
+
+</table>
+
+
+
+
+
+
+      <br>
+
+
+
+
+    </div>
+</form>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>UIR</title>
+  <link rel="stylesheet" media="all" href="/assets/application-a441a02d4d30c8baac6c150f7ac001e281a1b2901f55029138b11a1f9920c1da.css" data-turbolinks-track="true" />
+  <script src="/assets/application-768300f821892a7d121cd2bc3ea41884e332e830d146431b503b03c2595fb5d7.js" data-turbolinks-track="true"></script>
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="dtwh6/QYi5mkVaA3T4vYS1qC+/IyO6cIpTpVwgMow7FBye37x9Zua1lywvU4mIGJR/xJGhE5MPL4Nqnm5UCHcA==" />
+</head>
+<body>
+Оценка : 89.74137931034483
+Ошибки : []
+
+
+
+<link rel="stylesheet" media="screen" href="/assets/framestud-04024382391bb910584145d8113cf35ef376b55d125bb4516cebeb14ce788597.css" />
+<br>
+ <div align="center"> Время(<label id="min" contentEditable=true></label>:<label id="sec" contentEditable=true></label>:<label id="complete" contentEditable=true></label>) </div>
+
+
+<script>
+
+
+
+
+    var mytime = -5949
+    var minutes =  (mytime/60).toFixed(0);
+    var seconds =  (mytime % 60);
+    //alert(minutes)
+    //alert(seconds)
+    //alert("-5949")
+    //alert ("2022-11-29 17:24:19 +0300" + " " + "2022-11-29 15:30:10 +0300")
+    //alert(min + " " + sec)
+    var time = []
+    time.push(minutes);
+    time.push(seconds);
+    timerId = setInterval(function() {
+
+        time[1] --;
+        if (time[1] < 0)
+        {
+            time[1] = 59
+            time[0] --;
+        }
+        $("#min").text(time[0]);
+        $("#sec").text(time[1]);
+        if (time[0] <= 0)
+        {
+            $("#complete").text("ЗАВЕРШИТЬ");
+            $("#min").text(0);
+            $("#sec").text(0);
+
+        }
+
+
+    }, 1000);
+
+</script>
+
+
+<script>
+
+    function insertTab(o, e)
+    {
+        var kC = e.keyCode ? e.keyCode : e.charCode ? e.charCode : e.which;
+        if (kC == 9 && !e.shiftKey && !e.ctrlKey && !e.altKey)
+        {
+            var oS = o.scrollTop;
+            if (o.setSelectionRange)
+            {
+                var sS = o.selectionStart;
+                var sE = o.selectionEnd;
+                o.value = o.value.substring(0, sS) + "\t" + o.value.substr(sE);
+                o.setSelectionRange(sS + 1, sS + 1);
+                o.focus();
+            }
+            else if (o.createTextRange)
+            {
+                document.selection.createRange().text = "\t";
+                e.returnValue = false;
+            }
+            o.scrollTop = oS;
+            if (e.preventDefault)
+            {
+                e.preventDefault();
+            }
+            return false;
+        }
+        return true;
+    }
+
+
+
+
+</script>
+
+<form action="/framestudent/updateframe" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="ANX2dSIg7e5r4MFAlIA/lhAYp51ulSVqc+IXDplDsgY3wDplEe4IHJbHo4Ljk2ZUDWYVdU2XspAu7usqfyv2xw==" />
+    <div id="line">
+      <input type="hidden" name="id" id="id" value="835" />
+
+
+<table border="2px" align="center">
+   <caption><b> <label for="________:_________2">Название: Задание 2</label></b></caption>
+			<tr>
+				<td>Интерпретатор</td>			
+				<td>Словарь</td>			
+				<td>Вывод</td>			
+			</tr>
+      <tr>
+      
+      	 	<td><textarea name="studentcode" id="studentcode" autofocus="autofocus" rows="25" cols="105" onkeydown="insertTab(this, event)" maxlength="2500">
+(fassert место_добычи
+
+(classification value (generic))
+
+(место (default(мировой_океан) default(суша)))
+
+)
+
+(fget место_добычи)
+
+
+
+(fassert способы_добычи
+
+(classification value (generic))
+
+(способ (default(открытый) default(подземный) default(комбинированный)))
+
+)
+
+(fget способы_добычи)
+
+
+
+(fassert средства_добычи
+
+(classification value (generic))
+
+(средства (default(скважина) default(шахта)))
+
+)
+
+(fget средства_добычи)
+
+
+
+(fassert полезные_ископаемые
+
+(classification value (generic))
+
+(добыча (default(твердый) default(жидкий) default(газообразный)))
+
+)
+
+(fget полезные_ископаемые)
+
+
+
+(fassert добыча_полезных_ископаемых
+
+(classification value (generic))
+
+(ako (value место_добычи))
+
+(ako (value способы_добычи))
+
+(ako (value средства_добычи))
+
+(ako (value полезные_ископаемые))
+
+)
+
+(fget добыча_полезных_ископаемых)
+
+
+
+(fassert добыча_угля_в_шахте
+
+(ako (value добыча_полезных_ископаемых))
+
+(добыча (value(уголь)))
+
+(место (value()))
+
+
+
+
+
+
+
+
+
+
+
+</textarea> </td>
+      
+					<td><textarea name="dictionary" id="dictionary" autofocus="autofocus" rows="25" cols="25" onkeydown="insertTab(this, event)">
+[&quot;место_добычи&quot;, &quot;generic&quot;, &quot;место&quot;, &quot;мировой_океан&quot;, &quot;суша&quot;, &quot;способы_добычи&quot;, &quot;способ&quot;, &quot;открытый&quot;, &quot;подземный&quot;, &quot;комбинированный&quot;, &quot;средства_добычи&quot;, &quot;средства&quot;, &quot;скважина&quot;, &quot;шахта&quot;, &quot;полезные_ископаемые&quot;, &quot;добыча&quot;, &quot;твердый&quot;, &quot;жидкий&quot;, &quot;газообразный&quot;, &quot;добыча_полезных_ископаемых&quot;, &quot;ako&quot;, &quot;добыча_угля_в_шахте&quot;, &quot;подъемный&quot;, &quot;уголь&quot;]</textarea></td>
+      		<td><textarea name="console" id="666" autofocus="autofocus" rows="25" cols="40" onkeydown="insertTab(this, event)">
+Ошибки в фрейме: [&quot;300&quot;, 203]
+</textarea></td>
+      </tr>
+			<tr>
+				<td>      <input type="submit" name="commit" value="Транслировать" data-disable-with="Транслировать" />
+      						<input type="submit" name="commit" value="Завершить" data-disable-with="Завершить" /></td>
+			</tr>
+			<tr>
+				<td><textarea name="task" id="task" rows="25" cols="105" maxlength="2500">
+Задание 
+
+Создать фрейм прототип место_добычи 
+
+которые имеет одно поле &quot;место&quot; и несколько значений по умолчанию мировой_океан и суша
+
+
+
+Создать фрейм прототип способы_добычи
+
+которые имеет одно поле &quot;способ&quot; и несколько значений по умолчанию открытый подземный и комбинированный
+
+
+
+Создать фрейм прототип средства_добычи
+
+которые имеет одно поле &quot;средства&quot; и несколько значений по умолчанию скважина и шахта
+
+
+
+Создать фрейм прототип полезные_ископаемые
+
+которые имеет одно поле &quot;добыча&quot; и несколько значений по умолчанию твердый жидкий и газообразный
+
+
+
+Создать фрейм прототип добыча_полезных_ископаемых
+
+который наследует все свойства ранее созданных фреймов
+
+
+
+
+
+Создать добыча_угля_в_шахте  
+
+который наследуется от прототипного фрейма добыча_полезных_ископаемых 
+
+и имеет следующие значения в слотах:
+
+--
+
+добыча уголь
+
+место суша
+
+способ подъемный
+
+средства шахта
+
+--</textarea> </td>
+				<td><table border="2px">
+
+
+      <tr>
+        <td>frame:место_добычи</td>
+          <tr>
+            <td>classification:generic</td>
+            <td>[]</td>
+          </tr>
+          <tr>
+            <td>fslot:место</td>
+
+							
+
+							
+            <td>[&quot;default:мировой_океан&quot;, &quot;default:суша&quot;]</td>
+          </tr>
+      </tr>
+
+
+      <tr>
+        <td>frame:способы_добычи</td>
+          <tr>
+            <td>classification:generic</td>
+            <td>[]</td>
+          </tr>
+          <tr>
+            <td>fslot:способ</td>
+
+							
+
+							
+
+							
+            <td>[&quot;default:открытый&quot;, &quot;default:подземный&quot;, &quot;default:комбинированный&quot;]</td>
+          </tr>
+      </tr>
+
+
+      <tr>
+        <td>frame:средства_добычи</td>
+          <tr>
+            <td>classification:generic</td>
+            <td>[]</td>
+          </tr>
+          <tr>
+            <td>fslot:средства</td>
+
+							
+
+							
+            <td>[&quot;default:скважина&quot;, &quot;default:шахта&quot;]</td>
+          </tr>
+      </tr>
+
+
+      <tr>
+        <td>frame:полезные_ископаемые</td>
+          <tr>
+            <td>classification:generic</td>
+            <td>[]</td>
+          </tr>
+          <tr>
+            <td>fslot:добыча</td>
+
+							
+
+							
+
+							
+            <td>[&quot;default:твердый&quot;, &quot;default:жидкий&quot;, &quot;default:газообразный&quot;]</td>
+          </tr>
+      </tr>
+
+
+      <tr>
+        <td>frame:добыча_полезных_ископаемых</td>
+          <tr>
+            <td>classification:generic</td>
+            <td>[]</td>
+          </tr>
+          <tr>
+            <td>fslot:ako</td>
+
+							
+
+							
+
+							
+
+							
+            <td>[&quot;frame:место_добычи&quot;, &quot;frame:способы_добычи&quot;, &quot;frame:средства_добычи&quot;, &quot;frame:полезные_ископаемые&quot;]</td>
+          </tr>
+          <tr>
+            <td>fslot:место</td>
+
+							
+
+							
+            <td>[&quot;default:мировой_океан&quot;, &quot;default:суша&quot;]</td>
+          </tr>
+          <tr>
+            <td>fslot:способ</td>
+
+							
+
+							
+
+							
+            <td>[&quot;default:открытый&quot;, &quot;default:подземный&quot;, &quot;default:комбинированный&quot;]</td>
+          </tr>
+          <tr>
+            <td>fslot:средства</td>
+
+							
+
+							
+            <td>[&quot;default:скважина&quot;, &quot;default:шахта&quot;]</td>
+          </tr>
+          <tr>
+            <td>fslot:добыча</td>
+
+							
+
+							
+
+							
+            <td>[&quot;default:твердый&quot;, &quot;default:жидкий&quot;, &quot;default:газообразный&quot;]</td>
+          </tr>
+      </tr>
+
+
+</table>
+</td>
+			</tr>
+
+</table>
+
+
+
+
+
+
+      <br>
+
+
+
+
+    </div>
+</form>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>UIR</title>
+  <link rel="stylesheet" media="all" href="/assets/application-a441a02d4d30c8baac6c150f7ac001e281a1b2901f55029138b11a1f9920c1da.css" data-turbolinks-track="true" />
+  <script src="/assets/application-768300f821892a7d121cd2bc3ea41884e332e830d146431b503b03c2595fb5d7.js" data-turbolinks-track="true"></script>
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="x89pwyyT+U33WgmAWvKdlQA5p4aYQMGH5Qa8FnW2Wejw2qXTH10cvwp9a0It4cRXHUcVbrtCVn24CkAyk94dKQ==" />
+</head>
+<body>
+Оценка : 92.53191489361701
+Ошибки : []
+
+
+
+<link rel="stylesheet" media="screen" href="/assets/framestud-04024382391bb910584145d8113cf35ef376b55d125bb4516cebeb14ce788597.css" />
+<br>
+ <div align="center"> Время(<label id="min" contentEditable=true></label>:<label id="sec" contentEditable=true></label>:<label id="complete" contentEditable=true></label>) </div>
+
+
+<script>
+
+
+
+
+    var mytime = -5853
+    var minutes =  (mytime/60).toFixed(0);
+    var seconds =  (mytime % 60);
+    //alert(minutes)
+    //alert(seconds)
+    //alert("-5853")
+    //alert ("2022-11-29 17:24:19 +0300" + " " + "2022-11-29 15:31:46 +0300")
+    //alert(min + " " + sec)
+    var time = []
+    time.push(minutes);
+    time.push(seconds);
+    timerId = setInterval(function() {
+
+        time[1] --;
+        if (time[1] < 0)
+        {
+            time[1] = 59
+            time[0] --;
+        }
+        $("#min").text(time[0]);
+        $("#sec").text(time[1]);
+        if (time[0] <= 0)
+        {
+            $("#complete").text("ЗАВЕРШИТЬ");
+            $("#min").text(0);
+            $("#sec").text(0);
+
+        }
+
+
+    }, 1000);
+
+</script>
+
+
+<script>
+
+    function insertTab(o, e)
+    {
+        var kC = e.keyCode ? e.keyCode : e.charCode ? e.charCode : e.which;
+        if (kC == 9 && !e.shiftKey && !e.ctrlKey && !e.altKey)
+        {
+            var oS = o.scrollTop;
+            if (o.setSelectionRange)
+            {
+                var sS = o.selectionStart;
+                var sE = o.selectionEnd;
+                o.value = o.value.substring(0, sS) + "\t" + o.value.substr(sE);
+                o.setSelectionRange(sS + 1, sS + 1);
+                o.focus();
+            }
+            else if (o.createTextRange)
+            {
+                document.selection.createRange().text = "\t";
+                e.returnValue = false;
+            }
+            o.scrollTop = oS;
+            if (e.preventDefault)
+            {
+                e.preventDefault();
+            }
+            return false;
+        }
+        return true;
+    }
+
+
+
+
+</script>
+
+<form action="/framestudent/updateframe" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="MkxIhTOo/GfZuyzIDlOOdLkZDNHL+JMcUD4MoyfNO+cFWYSVAGYZlSScTgp5QNe2pGe+Oej6BOYNMvCHwaV/Jg==" />
+    <div id="line">
+      <input type="hidden" name="id" id="id" value="836" />
+
+
+<table border="2px" align="center">
+   <caption><b> <label for="________:_________1">Название: Задание 1</label></b></caption>
+			<tr>
+				<td>Интерпретатор</td>			
+				<td>Словарь</td>			
+				<td>Вывод</td>			
+			</tr>
+      <tr>
+      
+      	 	<td><textarea name="studentcode" id="studentcode" autofocus="autofocus" rows="25" cols="105" onkeydown="insertTab(this, event)" maxlength="2500">
+{
+
+(fassert Адрес
+
+(classification value(generic))
+
+(улица(default (Москворечье)))
+
+(дом)
+
+(корпус(default(нет)))
+
+(квартира)
+
+)
+
+(fget Адрес)
+
+(fassert Студент
+
+(classification value(generic))
+
+(ako(value Адрес))
+
+(ФИО)
+
+(Университет(default(НИЯУ_МИФИ)))
+
+(Кафедра(default(Кибернетика)))
+
+)
+
+(fget Студент)
+
+
+
+
+
+(fassert Преподаватель
+
+(classification value(generic))
+
+(ako(value Адрес))
+
+(ФИО)
+
+(Предмет)
+
+(Кафедра(default(Кибернетика)))
+
+)
+
+(fget Преподаватель)
+
+
+
+Написать фрейм Студент1 
+
+ФИО ИвановИИ
+
+Адрес Москворечье д7 кв45
+
+Университет МИФИ кафедра Кибернетика
+
+
+
+(fassert Студент1
+
+(ФИО(value(ИвановИИ)))
+
+(улица(value(Москворечье)))
+
+(дом(value(7)))
+
+(квартира(value(45)))
+
+(Университет(value(НИЯУ_МИФИ)))
+
+(Кафедра(value(Кибернетика)))
+
+)
+
+
+
+Написать фрейм Студент2
+
+ФИО ПетровПП
+
+Адрес Москворечье д7 кв44
+
+Университет МИФИ кафедра Кибернетика
+
+
+
+(fassert Студент2
+
+(ФИО(value(ПетровПП)))
+
+(улица(value(Москворечье)))
+
+(дом(value(7)))
+
+(квартира(value(44)))
+
+(Университет(value(НИЯУ_МИФИ)))
+
+(Кафедра(value(Кибернетика)))
+
+)
+
+
+
+Написать фрейм Студент3
+
+ФИО СидоровСС
+
+Адрес Кавказский_бульвар д7 корп 3 кв54
+
+Университет МИФИ кафедра Кибернетика
+
+
+
+(fassert Студент3
+
+(ФИО(value(СидоровСС)))
+
+(улица(value(Кавказский_бульвар)))
+
+(дом(value(7)))
+
+(квартира(value(54)))
+
+(корпус(value(3)))
+
+(Университет(value(НИЯУ_МИФИ)))
+
+(Кафедра(value(Кибернетика)))
+
+)
+
+
+
+
+
+
+
+(fassert Преподаватель1
+
+(ФИО(value(ПетровДС)))
+
+(улица(value(Москворечье)))
+
+(дом(value(8)))
+
+(квартира(value(54)))
+
+(корпус(value(1)))
+
+(Предмет(value(ПрограммированиеС)))
+
+(Кафедра(value(Кибернетика)))
+
+)
+
+
+
+Написать фрейм Преподаватель2
+
+ФИО УшаковУУ
+
+Адрес Москворечьед7 корп 3 кв99
+
+Университет МИФИ кафедра Кибернетика Предмет 
+
+ПрограммированиеС
+
+
+
+(fassert Преподаватель2
+
+(ФИО(value(УшаковУУ)))
+
+(улица(value(Москворечье)))
+
+(дом(value(7)))
+
+(квартира(value(99)))
+
+(корпус(value(3)))
+
+(Предмет(value(ПрограммированиеС)))
+
+(Кафедра(value(Кибернетика)))
+
+)
+
+
+
+ }</textarea> </td>
+      
+					<td><textarea name="dictionary" id="dictionary" autofocus="autofocus" rows="25" cols="25" onkeydown="insertTab(this, event)">
+[&quot;Адрес&quot;, &quot;generic&quot;, &quot;улица&quot;, &quot;Москворечье&quot;, &quot;дом&quot;, &quot;корпус&quot;, &quot;нет&quot;, &quot;квартира&quot;, &quot;Студент&quot;, &quot;ako&quot;, &quot;ФИО&quot;, &quot;Университет&quot;, &quot;НИЯУ_МИФИ&quot;, &quot;Кафедра&quot;, &quot;Кибернетика&quot;, &quot;Преподаватель&quot;, &quot;Предмет&quot;, &quot;Студент1&quot;, &quot;7&quot;, &quot;45&quot;, &quot;ИвановИИ&quot;, &quot;Студент2&quot;, &quot;44&quot;, &quot;ПетровПП&quot;, &quot;Студент3&quot;, &quot;Кавказский_бульвар&quot;, &quot;3&quot;, &quot;54&quot;, &quot;СидоровСС&quot;, &quot;Преподаватель1&quot;, &quot;8&quot;, &quot;1&quot;, &quot;ПетровДС&quot;, &quot;ПрограммированиеС&quot;, &quot;Преподаватель2&quot;, &quot;99&quot;, &quot;УшаковУУ&quot;]</textarea></td>
+      		<td><textarea name="console" id="666" autofocus="autofocus" rows="25" cols="40" onkeydown="insertTab(this, event)">
+Ошибки в фрейме: []
+</textarea></td>
+      </tr>
+			<tr>
+				<td>      <input type="submit" name="commit" value="Транслировать" data-disable-with="Транслировать" />
+      						<input type="submit" name="commit" value="Завершить" data-disable-with="Завершить" /></td>
+			</tr>
+			<tr>
+				<td><textarea name="task" id="task" rows="25" cols="105" maxlength="2500">
+{ 
+
+  Задание :
+
+  Написать Фрейм прототип Адрес 
+
+  в котором есть следующие слоты улица (по умолчанию Москворечье), дом, корпус (по умолчанию нет, и квартира
+
+    Написать фрейм прототип студент, у которого есть адрес, ФИО, Университет по умолчанию НИЯУ_МИФИ, кафедра (по умолчанию Кибернетика) 
+
+
+
+  Написать фрейм прототип преподаватель, у которого есть адрес, ФИО, Предмет (Название предмета который он ведет), и кафедра ( по умолчанию Кибернетика)
+
+
+
+Написать фрейм Студент1 
+
+ФИО ИвановИИ
+
+Адрес Москворечье д7 кв45
+
+Университет МИФИ кафедра Кибернетика
+
+
+
+Написать фрейм Студент2
+
+ФИО ПетровПП
+
+Адрес Москворечье д7 кв44
+
+Университет МИФИ кафедра Кибернетика
+
+
+
+Написать фрейм Студент3
+
+ФИО СидоровСС
+
+Адрес Кавказский_бульвар д7 корп 3 кв54
+
+Университет МИФИ кафедра Кибернетика
+
+
+
+Написать фрейм Преподаватель1
+
+ФИО ПетровДС
+
+Адрес Москворечье д8 корп 1 кв54
+
+Университет МИФИ кафедра Кибернетика Предмет 
+
+ПрограммированиеС
+
+
+
+Написать фрейм Преподаватель2
+
+ФИО УшаковУУ
+
+Адрес Москворечьед7 корп 3 кв99
+
+Университет МИФИ кафедра Кибернетика Предмет 
+
+ПрограммированиеС
+
+
+
+ }</textarea> </td>
+				<td><table border="2px">
+
+
+      <tr>
+        <td>frame:адрес</td>
+          <tr>
+            <td>classification:generic</td>
+            <td>[]</td>
+          </tr>
+          <tr>
+            <td>fslot:улица</td>
+
+							
+            <td>[&quot;default:москворечье&quot;]</td>
+          </tr>
+          <tr>
+            <td>fslot:дом</td>
+            <td>[]</td>
+          </tr>
+          <tr>
+            <td>fslot:корпус</td>
+
+							
+            <td>[&quot;default:нет&quot;]</td>
+          </tr>
+          <tr>
+            <td>fslot:квартира</td>
+            <td>[]</td>
+          </tr>
+      </tr>
+
+
+      <tr>
+        <td>frame:студент</td>
+          <tr>
+            <td>classification:generic</td>
+            <td>[]</td>
+          </tr>
+          <tr>
+            <td>fslot:ako</td>
+
+							
+            <td>[&quot;frame:адрес&quot;]</td>
+          </tr>
+          <tr>
+            <td>fslot:улица</td>
+
+							
+            <td>[&quot;default:москворечье&quot;]</td>
+          </tr>
+          <tr>
+            <td>fslot:дом</td>
+            <td>[]</td>
+          </tr>
+          <tr>
+            <td>fslot:корпус</td>
+
+							
+            <td>[&quot;default:нет&quot;]</td>
+          </tr>
+          <tr>
+            <td>fslot:квартира</td>
+            <td>[]</td>
+          </tr>
+          <tr>
+            <td>fslot:фио</td>
+            <td>[]</td>
+          </tr>
+          <tr>
+            <td>fslot:университет</td>
+
+							
+            <td>[&quot;default:нияу_мифи&quot;]</td>
+          </tr>
+          <tr>
+            <td>fslot:кафедра</td>
+
+							
+            <td>[&quot;default:кибернетика&quot;]</td>
+          </tr>
+      </tr>
+
+
+      <tr>
+        <td>frame:преподаватель</td>
+          <tr>
+            <td>classification:generic</td>
+            <td>[]</td>
+          </tr>
+          <tr>
+            <td>fslot:ako</td>
+
+							
+            <td>[&quot;frame:адрес&quot;]</td>
+          </tr>
+          <tr>
+            <td>fslot:улица</td>
+
+							
+            <td>[&quot;default:москворечье&quot;]</td>
+          </tr>
+          <tr>
+            <td>fslot:дом</td>
+            <td>[]</td>
+          </tr>
+          <tr>
+            <td>fslot:корпус</td>
+
+							
+            <td>[&quot;default:нет&quot;]</td>
+          </tr>
+          <tr>
+            <td>fslot:квартира</td>
+            <td>[]</td>
+          </tr>
+          <tr>
+            <td>fslot:фио</td>
+            <td>[]</td>
+          </tr>
+          <tr>
+            <td>fslot:предмет</td>
+            <td>[]</td>
+          </tr>
+          <tr>
+            <td>fslot:кафедра</td>
+
+							
+            <td>[&quot;default:кибернетика&quot;]</td>
+          </tr>
+      </tr>
+
+
+</table>
+</td>
+			</tr>
+
+</table>
+
+
+
+
+
+
+      <br>
+
+
+
+
+    </div>
+</form>
+
+</body>
+</html>
+
+</body>
+</html>
