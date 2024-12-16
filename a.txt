@@ -1,0 +1,203 @@
+// 1 ВАРИК
+
+(fassert место_рыбалки
+
+    (classification (value(generic)))
+
+    (место (default(море) (озеро) (океан) (река)))
+
+)
+
+
+(fassert средства_ловли
+
+    (classification (value(generic)))
+
+    (средства (default(спиннинг) (лодка) (червяк) (наживка)))
+)
+
+
+(fassert рыба
+
+    (classification (value(generic)))
+
+    (вид (default(хищная) (полухищная) (травоядная)))
+)
+
+
+(fassert рыбалка_на_пресных водоемах
+
+    (classification (value(generic)))
+
+    (ako (value (место_рыбалки)))
+    (ako (value (средства_ловли)))
+    (ako (value (рыба)))
+
+    (рыбак (default(профессионал) (любитель) (спортсмен)))
+)
+
+(fassert любительская_рыбалка_на_реке_обь 
+
+    (ako (value (рыбалка_на_пресных_водоемах)))
+
+    (место (value (река_обь)))
+    (рыбак (value (любитель)))
+)
+
+
+// 2 ВАРИК
+
+
+(fassert Адрес
+
+    (classification (value(generic)))
+
+    (улица (default(Москворечье)))
+    (дом)
+    (корпус(default(нет)))
+    (квартира)
+)
+
+(fassert Студент
+
+    (classification (value(generic)))
+
+    (ako (value (Aдрес)))
+
+    (ФИО)
+
+    (Университет (default(НИЯУ_МИФИ)))
+    (Кафедра (default(Кибернетика)))
+)
+
+(fassert Преподаватель
+
+    (classification (value(generic)))
+
+    (ako (value (Адрес)))
+
+    (ФИО)
+    (Предмет)
+    (Кафедра (default(Кибернетика)))
+)
+
+
+(fassert Студент1 
+
+    (ako (value (Cтудент)))
+
+    (ФИО (value (ИвановИИ)))
+
+    (дом (value (7)))
+    (квартира (value (45)))
+)
+
+
+(fassert Студент2
+
+    (ako (value (Студент)))
+
+    (ФИО (value (ПетровПП)))
+    
+    (дом (value (7)))
+    (квартира (value (44)))
+)
+
+(fassert Студент3
+
+    (ako (value (Студент)))
+
+    (ФИО (value (СидоровСС)))
+    
+    (улица (value (Кавказский-бульвар)))
+    (дом (value (7)))
+    (корпус (value (3)))
+    (квартира (value (54)))
+
+)
+
+(fassert Преподаватель1
+
+    (ako (value (Преподаватель)))
+
+    (ФИО (value (ПетровДС)))
+    (Предмет (value (Программирование)))
+    (дом (value (8)))
+    (корпус (value (1)))
+    (квартира (value (54)))
+)
+
+(fassert Преподаватель2
+
+    (ako (value (Преподаватель)))
+
+    (ФИО (value (УшаковУУ)))
+    (Предмет (value (Программирование)))
+    (дом (value (7)))
+    (корпус (value (3)))
+    (квартира (value(99)))
+)
+
+
+// 3 ВАРИК
+
+
+(fassert место_добычи
+
+    (classification (value (generic)))
+
+    (место (default(мировой_океан) (суша)))
+
+)
+
+(fassert способы_добычи
+
+    (classification (value (generic)))
+
+    (способ (default(открытый) (подземный) (комбинированный)))
+
+)
+
+(fassert средства_добычи
+
+    (classification (value (generic)))
+
+    (средства (default(скважина) (шахта)))
+
+)
+
+(fassert полезные_ископаемые
+
+    (classification (value (generic)))
+
+    (добыча (default(твердый) (жидкий) (газообразный)))
+
+)
+
+(fassert добыча_полезных_ископаемых
+
+    (classification (value (generic)))
+
+    (ako (value (место_добычи)))
+
+    (ako (value (способы_добычи)))
+
+    (ako (value (средства_добычи)))
+
+    (ako (value (полезные_ископаемые)))
+
+)
+
+
+(fassert добыча_угля_в_шахте
+
+    (ako (value (добыча_полезных_ископаемых)))
+
+    (добыча (value (уголь)))
+
+    (место (value (суша)))
+
+    (способ (value (подъемный)))
+
+    (средства (value (шахта)))
+)
